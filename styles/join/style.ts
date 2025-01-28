@@ -94,7 +94,7 @@ export const SpaceContainer = styled.div<{ isMobile: boolean }>`
 `;
 
 export const Planet = styled.div<{ launched: boolean }>`
-  width: 100%;
+  width: 180%;
   position: absolute;
   bottom: 0;
   left: 50%;

@@ -9,7 +9,8 @@ import spaceImg from 'public/assets/space_pressed.jpg';
 // import spaceImg3 from "public/assets/space3.jpg";
 import ReactPannellum, { getConfig } from 'react-pannellum';
 import { FireLottie } from 'components/lottie/lottie';
-import RocketImg from 'public/assets/Rocket.png';
+import RocketImg from 'public/assets/joinus_rocket.png';
+import PlanetImg from 'public/assets/new_earth.svg';
 import { motion } from 'framer-motion';
 import S3upload from 'components/s3upload/index';
 import { useRecoilState } from 'recoil';
@@ -236,7 +237,7 @@ export default function Join() {
                         </S.RocketContainer>
 
                         <S.Planet launched={launch}>
-                            <img draggable={false} src="https://media-public.canva.com/Y2Ods/MAD9dPY2Ods/1/tl.png" />
+                            <img draggable={false} src={PlanetImg.src} />
                         </S.Planet>
                     </S.SpaceContainer>
 
