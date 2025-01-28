@@ -1,26 +1,127 @@
+/* styles/globals.css */
+
+/* Pretendard Thin (weight: 100) */
+@font-face {
+    font-family: "Pretendard";
+    src: url("/font/Pretendard-Thin.woff2") format("woff2"),
+        url("/font/Pretendard-Thin.woff") format("woff");
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Pretendard ExtraLight (weight: 200) */
+@font-face {
+    font-family: "Pretendard";
+    src: url("/font/Pretendard-ExtraLight.woff2") format("woff2"),
+        url("/font/Pretendard-ExtraLight.woff") format("woff");
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Pretendard Light (weight: 300) */
+@font-face {
+    font-family: "Pretendard";
+    src: url("/font/Pretendard-Light.woff2") format("woff2"),
+        url("/font/Pretendard-Light.woff") format("woff");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Pretendard Regular (weight: 400) */
+@font-face {
+    font-family: "Pretendard";
+    src: url("/font/Pretendard-Regular.woff2") format("woff2"),
+        url("/font/Pretendard-Regular.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Pretendard Medium (weight: 500) */
+@font-face {
+    font-family: "Pretendard";
+    src: url("/font/Pretendard-Medium.woff2") format("woff2"),
+        url("/font/Pretendard-Medium.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Pretendard SemiBold (weight: 600) */
+@font-face {
+    font-family: "Pretendard";
+    src: url("/font/Pretendard-SemiBold.woff2") format("woff2"),
+        url("/font/Pretendard-SemiBold.woff") format("woff");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Pretendard Bold (weight: 700) */
+@font-face {
+    font-family: "Pretendard";
+    src: url("/font/Pretendard-Bold.woff2") format("woff2"),
+        url("/font/Pretendard-Bold.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Pretendard ExtraBold (weight: 800) */
+@font-face {
+    font-family: "Pretendard";
+    src: url("/font/Pretendard-ExtraBold.woff2") format("woff2"),
+        url("/font/Pretendard-ExtraBold.woff") format("woff");
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Pretendard Black (weight: 900) */
+@font-face {
+    font-family: "Pretendard";
+    src: url("/font/Pretendard-Black.woff2") format("woff2"),
+        url("/font/Pretendard-Black.woff") format("woff");
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* ------------------------ */
+/* 여기부터 글로벌 스타일 */
+/* ------------------------ */
+
+/* html, body 기본 스타일 */
 html,
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    padding: 0;
+    margin: 0;
+    font-family: "Pretendard", -apple-system, BlinkMacSystemFont, Segoe UI,
+        Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
+        sans-serif;
 }
 
+/* 모든 링크 초기화 */
 a {
-  color: inherit;
-  text-decoration: none;
+    color: inherit;
+    text-decoration: none;
 }
 
+/* 박스 사이징 설정 */
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
+/* 다크 모드 프리퍼 설정 */
 @media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+    html {
+        color-scheme: dark;
+    }
+    body {
+        color: white;
+        background: black;
+    }
 }

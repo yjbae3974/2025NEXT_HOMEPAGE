@@ -241,8 +241,8 @@ const NavBar = () => {
                                         ))}
                                     </S.MenuWrapper>
                                     <S.NoticeContainer>
-                                        <p>ⓒ NEXT X Likelion</p>
-                                        <p>next.recruit@gmail.com</p>
+                                        <p>Ⓒ NEXT(고려대학교 멋쟁이사자처럼)</p>
+                                        <p>nextku.contact@gmail.com</p>
                                         <p>Korea University, Anam-dong, Seongbuk-gu,</p>
                                         <p>Seoul, South Korea</p>
                                     </S.NoticeContainer>

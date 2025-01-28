@@ -5,9 +5,10 @@ import * as S from 'styles/home/style';
 import { useMediaQuery } from 'react-responsive';
 import Intro from 'components/intro';
 import Logo from 'public/assets/logo.png';
-import MainBG from 'public/assets/home-bg-1.png';
+import LikeLion from 'public/assets/likelion_kor_logo.svg';
+import MainBG from 'public/assets/Rocket_Background.png';
 import Section2Img from 'public/assets/main_section2.png';
-import Text from 'public/assets/homeMainSmallLogo.png';
+import Text from 'public/assets/Accelerate_Your_Potential.svg';
 import { RocketLottie, LaptopLottie, SessionLottie, ProjectLottie, DemodayLottie } from 'components/lottie/lottie';
 import { Partners } from 'constants/partners';
 import Sticky from 'components/sticky';
@@ -41,12 +42,16 @@ export default function Main() {
                 <S.Container>
                     <S.MainContainer>
                         <S.MainWrapper isMobile={isMobile}>
+                        <S.MainTextWrapper>
+                                <img src={Text.src} />
+                            </S.MainTextWrapper>
                             <S.MainContainerLogo>
                                 <img src={Logo.src} />
                             </S.MainContainerLogo>
-                            <S.MainTextWrapper>
-                                <img src={Text.src} />
-                            </S.MainTextWrapper>
+                            <S.MainTextLionWrapper>
+                                <h2>고려대학교</h2>
+                                <img src={LikeLion.src}/>
+                            </S.MainTextLionWrapper>
                         </S.MainWrapper>
                         <S.MainContainerBG src={MainBG.src} isMobile={isMobile} />
                     </S.MainContainer>

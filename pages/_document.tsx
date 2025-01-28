@@ -44,8 +44,10 @@ export default class MyDocument extends Document {
 
                     <meta name="Keywords" content="NEXT: 고려대학교 소프트웨어창업학회 NEXT" />
                     <meta name="keywords" content="NEXT: 고려대학교 소프트웨어창업학회 NEXT" />
-                    <meta name="Description" content="고려대학교 소프트웨어창업학회 NEXT" />
-                    <meta name="description" content="고려대학교 소프트웨어창업학회 NEXT" />
+                    <meta name="description" content="🚀Acclerate Your Potential! NEXT(고려대학교 멋쟁이사자처럼)" />
+                    <meta name="Description" content="🚀Acclerate Your Potential! NEXT(고려대학교 멋쟁이사자처럼)" />
+                    {/* <meta name="Description" content="고려대학교 소프트웨어창업학회 NEXT" />
+                    <meta name="description" content="고려대학교 소프트웨어창업학회 NEXT" /> */}
                     <meta name="google-site-verification" content="YdrWjel7OcCUGNmuvaV86uwaB_ZEqJsOqOoV-rKi6vA" />
                     <link
                         rel="stylesheet"

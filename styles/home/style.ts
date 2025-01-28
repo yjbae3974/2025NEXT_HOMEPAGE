@@ -1,5 +1,5 @@
-import styled, { css, keyframes } from 'styled-components';
-import { THEME } from 'styles/theme';
+import styled, { css, keyframes } from "styled-components";
+import { THEME } from "styles/theme";
 export const color = keyframes`
 0%{
   filter: grayscale(1)
@@ -30,7 +30,7 @@ export const Container = styled.div`
 
 export const MainContainer = styled.div`
     width: 100%;
-    height: calc(100vh - 112px);
+    min-height: calc(100vh - 112px);
     margin-top: 112px;
     display: flex;
     align-items: center;
@@ -40,7 +40,7 @@ export const MainContainer = styled.div`
 export const MainContainerBG = styled.img<{ isMobile: boolean }>`
     width: 100%;
     height: 100%;
-    opacity: 0.3;
+    opacity: 0.7;
     object-fit: cover;
     filter: grayscale(1);
     animation: ${color} 3s 0.5s forwards;
@@ -60,10 +60,10 @@ export const MainContainerLogo = styled.div`
 export const MainWrapper = styled.div<{ isMobile: boolean }>`
     position: absolute;
     z-index: 2;
-    top: 50%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: ${(props) => (props.isMobile ? '80%' : '60%')};
+    width: ${(props) => (props.isMobile ? "80%" : "60%")};
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -72,10 +72,24 @@ export const MainWrapper = styled.div<{ isMobile: boolean }>`
 `;
 export const MainTextWrapper = styled.div`
     width: 100%;
-    margin-top: 3rem;
+    margin-bottom: 5rem;
     & img {
-        width: 100%;
+        width: 40%;
     }
+    display: flex;
+    justify-content: center;
+`;
+export const MainTextLionWrapper = styled.div`
+    margin-top: 2rem;
+    display: flex;
+    color: white;
+    font-weight: 700;
+    gap: 16px;
+    h2{
+        font-size: 3rem;
+        }
+    img{
+        width: 200px;}
 `;
 export const Section1 = styled.div<{ isMobile: boolean }>`
     width: 100%;
@@ -192,7 +206,10 @@ export const LottieContainer = styled.div<{ isMobile: boolean }>`
 export const ArrowBG = styled.div<{ isMobile: boolean }>`
     width: 100%;
     height: 140%;
-    background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5));
+    background: linear-gradient(
+        rgba(255, 255, 255, 0),
+        rgba(255, 255, 255, 0.5)
+    );
     position: absolute;
     left: 0;
     top: 0;
