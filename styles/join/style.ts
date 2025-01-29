@@ -199,7 +199,6 @@ export const TitleWrapper = styled.div<{ isMobile: boolean }>`
     width: 80%;
     max-width: 800px;
     position: absolute;
-    /* max-height: 30vh; */
     z-index: 4;
     top: 40vh;
     left: 50%;
@@ -210,41 +209,77 @@ export const TitleWrapper = styled.div<{ isMobile: boolean }>`
     color: white;
     flex-direction: column;
     flex-wrap: wrap;
-
     pointer-events: none;
     opacity: 0;
     animation: ${fadeIn} 2s 4s forwards;
-    & img {
+
+    & > img {
         width: 100%;
-        /* max-height: 100%; */
-        margin-bottom: 2rem;
+        margin-bottom: 2.5rem;
         ${(props) =>
             !props.isMobile &&
             css`
                 width: 60%;
             `}
     }
-    & p {
+
+    & > div.university-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        margin-bottom: 2.5rem;
+        gap: 2rem;
+
+        & span {
+            font-size: 3.6rem;
+            font-family: 'GmarketSansMedium';
+            font-weight: 700;
+            white-space: nowrap;
+        }
+
+        & img {
+            height: 3.6rem;
+            width: auto;
+            margin: 0;
+        }
+    }
+
+    & > p {
         font-family: 'GmarketSansMedium';
         font-weight: 700;
-        font-size: 4rem;
+        font-size: 2.5rem;
+        width: 100%;
+        text-align: center;
+        margin: 0;
+        margin-bottom: 2.5rem;
+        position: relative;
+        top: -1rem;
     }
 `;
 export const RocketInfo = styled.div`
-    width: 100%;
-    margin-top: 1rem;
-    /* position: absolute; */
+    width: 60%;
+    margin-top: 0;
+    position: relative;
+    top: -1rem;
     text-align: center;
-    /* left: 0; */
     opacity: 0;
-    /* bottom: 20px; */
-    color: white;
-
     animation: ${fadeIn} 1s 5s alternate infinite;
+    background-color: rgba(169, 169, 169, 0.8);
+    border-radius: 8px;
+    padding: 0.8rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+
     & p {
         font-size: 1.8rem;
         font-weight: 400;
-        color: ${THEME.LIGHT_GRAY};
+        color: white;
+        margin: 0;
+    }
+    & span {
+        color: ${THEME.ORANGE};
+        font-family: 'Pretendard', 'Spoqa Han Sans Neo', 'sans-serif', "애플 SD 산돌고딕 Neo", "Apple SD Gothic Neo", "Malgun Gothic", "arial sans-serif";
+        font-weight: 700;
     }
 `;
 export const InfoModal = styled.div`

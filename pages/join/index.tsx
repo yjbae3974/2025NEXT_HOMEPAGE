@@ -10,7 +10,7 @@ import spaceImg from 'public/assets/space_pressed.jpg';
 import ReactPannellum, { getConfig } from 'react-pannellum';
 import { FireLottie } from 'components/lottie/lottie';
 import RocketImg from 'public/assets/joinus_rocket.png';
-import PlanetImg from 'public/assets/new_earth.svg';
+import PlanetImg from 'public/assets/new_earth@4x.png';
 import { motion } from 'framer-motion';
 import S3upload from 'components/s3upload/index';
 import { useRecoilState } from 'recoil';
@@ -99,9 +99,15 @@ export default function Join() {
                         <S.TitleWrapper isMobile={isMobile}>
                             <img src={Text.src} style={{ width: '60%' }} />
                             <img src={Logo.src} />
+                            <div className="university-wrapper">
+                                <span>고려대학교</span>
+                                <img src={LogoLikeLion.src} />
+                            </div>
                             <p>13기 모집</p>
-                            <S.RocketInfo>
-                                <p>로켓을 눌러보세요!</p>
+                            <S.RocketInfo className="rocket-info">
+                                <p>
+                                    <span className="rocket">로켓</span>을 눌러보세요!
+                                </p>
                             </S.RocketInfo>
                         </S.TitleWrapper>
                     )}
