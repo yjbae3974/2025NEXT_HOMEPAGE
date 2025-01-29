@@ -65,6 +65,10 @@ export const NextInlineLogo = styled.img<NextInlineLogoProps>`
   display: inline-block;
   margin-left: 10px;
   margin-right: 3px;
+
+  @media (max-width: 820px) {
+    width: 80px;
+  }
 `;
 export const Sticky = styled.div<{ isMobile: boolean }>`
   width: 100%;

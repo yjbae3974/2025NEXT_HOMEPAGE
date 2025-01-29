@@ -205,7 +205,28 @@ export const NextInlineLogo = styled.img<NextInlineLogoProps>`
     display: inline-block;
     margin-left: ${({ marginLeft }) => marginLeft ?? "10px"};
     margin-right: ${({ marginRight }) => marginRight ?? "3px"};
+
 `;
+
+interface NextInlineLogoProps2 {
+    width?: string; 
+    marginLeft?: string; 
+    marginRight?: string;
+}
+
+export const NextInlineLogo2 = styled.img<NextInlineLogoProps2>`
+    position: relative;
+    top: -3px;
+    width: ${({ width }) => width ?? "120px"};
+    display: inline-block;
+    margin-left: ${({ marginLeft }) => marginLeft ?? "10px"};
+    margin-right: ${({ marginRight }) => marginRight ?? "3px"};
+
+    @media (max-width: 820px) {
+    width: 80px;
+    }
+`;
+
 export const LottieContainer = styled.div<{ isMobile: boolean }>`
     width: 125%;
     display: flex;

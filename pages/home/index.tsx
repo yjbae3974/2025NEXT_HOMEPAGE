@@ -8,7 +8,7 @@ import Logo from "public/assets/logo.png";
 import LikeLion from "public/assets/likelion_kor_logo.svg";
 import MainBG from "public/assets/Rocket_Background.png";
 import Section2Img from "public/assets/main_section2.png";
-import Text from "public/assets/Accelerate_Your_Potential.svg";
+import Text from "public/assets/Accelerate_Your_Potential_new.svg";
 import {
     RocketLottie,
     LaptopLottie,
@@ -98,7 +98,7 @@ export default function Main() {
                                 data-aos="fade"
                             >
                                 고려대학교 소프트웨어 창업학회
-                                <S.NextInlineLogo src={Logo.src} alt="" />
+                                <S.NextInlineLogo src={Logo.src} alt=""  />
                                 
                                 는
                             </p>
@@ -190,7 +190,7 @@ export default function Main() {
                             >
                                 <span>
                                     고려대학교 소프트웨어 창업학회 &nbsp;
-                                    <S.NextInlineLogo src={Logo.src} width="100px" marginLeft="2px" marginRight="3px" />
+                                    <S.NextInlineLogo2 src={Logo.src} width="100px" marginLeft="2px" marginRight="3px" />
                                     와 함께하는
                                 </span>
                             </p>
