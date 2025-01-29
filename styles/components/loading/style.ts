@@ -44,6 +44,9 @@ export const Text = styled.div`
   font-weight: 600;
   animation: ${blink} 0.5s infinite alternate;
 `;
+export const LoadingWrapper = styled.div`
+  width: 300px;
+`
 export const SpinnerWrapper = styled.div`
   width: 10rem;
   animation: ${spin} 1s infinite;

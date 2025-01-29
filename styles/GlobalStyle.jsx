@@ -21,7 +21,7 @@ const GlobalStyleWrapper = createGlobalStyle`
     padding: 0px;
     margin: 0px;
     /* box-sizing: border-box; */
-    font-family:'Spoqa Han Sans Neo', 'sans-serif', "애플 SD 산돌고딕 Neo", "Apple SD Gothic Neo", "Malgun Gothic", "arial sans-serif";
+    font-family:'Pretendard', 'Spoqa Han Sans Neo', 'sans-serif', "애플 SD 산돌고딕 Neo", "Apple SD Gothic Neo", "Malgun Gothic", "arial sans-serif";
   }
   body, button, form, h1, h2, h3, h4, h5, h6, p, input, legend, li, ol, ul, select, table, td, textarea, th {
     margin:0;
