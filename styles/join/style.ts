@@ -232,14 +232,14 @@ export const TitleWrapper = styled.div<{ isMobile: boolean }>`
         gap: 2rem;
 
         & span {
-            font-size: 3.6rem;
+            font-size: 3rem;
             font-family: 'GmarketSansMedium';
             font-weight: 700;
             white-space: nowrap;
         }
 
         & img {
-            height: 3.6rem;
+            height: 3rem;
             width: auto;
             margin: 0;
         }
@@ -252,20 +252,20 @@ export const TitleWrapper = styled.div<{ isMobile: boolean }>`
         width: 100%;
         text-align: center;
         margin: 0;
-        margin-bottom: 2.5rem;
+        margin-bottom: 3.5rem;
         position: relative;
-        top: -1rem;
+        top: 0;
     }
 `;
 export const RocketInfo = styled.div`
-    width: 60%;
+    width: 35%;
     margin-top: 0;
     position: relative;
     top: -1rem;
     text-align: center;
     opacity: 0;
     animation: ${fadeIn} 1s 5s alternate infinite;
-    background-color: rgba(169, 169, 169, 0.8);
+    background-color: rgba(99, 98, 98, 0.8);
     border-radius: 8px;
     padding: 0.8rem;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
@@ -278,7 +278,8 @@ export const RocketInfo = styled.div`
     }
     & span {
         color: ${THEME.ORANGE};
-        font-family: 'Pretendard', 'Spoqa Han Sans Neo', 'sans-serif', "애플 SD 산돌고딕 Neo", "Apple SD Gothic Neo", "Malgun Gothic", "arial sans-serif";
+        font-family: 'Pretendard', 'Spoqa Han Sans Neo', 'sans-serif', '애플 SD 산돌고딕 Neo', 'Apple SD Gothic Neo',
+            'Malgun Gothic', 'arial sans-serif';
         font-weight: 700;
     }
 `;

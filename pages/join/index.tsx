@@ -97,7 +97,7 @@ export default function Join() {
                 <S.Container>
                     {!launch && (
                         <S.TitleWrapper isMobile={isMobile}>
-                            <img src={Text.src} style={{ width: '60%' }} />
+                            <img src={Text.src} style={{ width: '40%' }} />
                             <img src={Logo.src} />
                             <div className="university-wrapper">
                                 <span>고려대학교</span>
