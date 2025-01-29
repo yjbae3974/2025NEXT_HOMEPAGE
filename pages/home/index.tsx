@@ -1,23 +1,29 @@
-import Head from 'next/head';
-import React, { useState, useEffect, useRef } from 'react';
-import Image from 'next/image';
-import * as S from 'styles/home/style';
-import { useMediaQuery } from 'react-responsive';
-import Intro from 'components/intro';
-import Logo from 'public/assets/logo.png';
-import LikeLion from 'public/assets/likelion_kor_logo.svg';
-import MainBG from 'public/assets/Rocket_Background.png';
-import Section2Img from 'public/assets/main_section2.png';
-import Text from 'public/assets/Accelerate_Your_Potential.svg';
-import { RocketLottie, LaptopLottie, SessionLottie, ProjectLottie, DemodayLottie } from 'components/lottie/lottie';
-import { Partners } from 'constants/partners';
-import Sticky from 'components/sticky';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-import { useRouter } from 'next/router';
-import { ImageElementWrapper } from 'styles/about/components/partners/styles';
-import next11thImg from 'public/images/next11/next11.png';
-import laptopImg from 'public/assets/home-bg-2 2.png';
+import Head from "next/head";
+import React, { useState, useEffect, useRef } from "react";
+import Image from "next/image";
+import * as S from "styles/home/style";
+import { useMediaQuery } from "react-responsive";
+import Intro from "components/intro";
+import Logo from "public/assets/logo.png";
+import LikeLion from "public/assets/likelion_kor_logo.svg";
+import MainBG from "public/assets/Rocket_Background.png";
+import Section2Img from "public/assets/main_section2.png";
+import Text from "public/assets/Accelerate_Your_Potential.svg";
+import {
+    RocketLottie,
+    LaptopLottie,
+    SessionLottie,
+    ProjectLottie,
+    DemodayLottie,
+} from "components/lottie/lottie";
+import { Partners } from "constants/partners";
+import Sticky from "components/sticky";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useRouter } from "next/router";
+import { ImageElementWrapper } from "styles/about/components/partners/styles";
+import next11thImg from "public/images/next11/next11.png";
+import laptopImg from "public/assets/home-bg-2 2.png";
 export default function Main() {
     const router = useRouter();
     const [loading, setLoading] = useState(true);
@@ -34,15 +40,21 @@ export default function Main() {
         <div>
             <Head>
                 <title>NEXT: HOME</title>
-                <meta name="description" content="고려대학교 소프트웨어창업학회 NEXT" />
-                <meta name="google-site-verification" content="YdrWjel7OcCUGNmuvaV86uwaB_ZEqJsOqOoV-rKi6vA" />
+                <meta
+                    name="description"
+                    content="고려대학교 소프트웨어창업학회 NEXT"
+                />
+                <meta
+                    name="google-site-verification"
+                    content="YdrWjel7OcCUGNmuvaV86uwaB_ZEqJsOqOoV-rKi6vA"
+                />
             </Head>
             {/* <Intro></Intro> */}
             {!loading && (
                 <S.Container>
                     <S.MainContainer>
                         <S.MainWrapper isMobile={isMobile}>
-                        <S.MainTextWrapper>
+                            <S.MainTextWrapper>
                                 <img src={Text.src} />
                             </S.MainTextWrapper>
                             <S.MainContainerLogo>
@@ -50,10 +62,13 @@ export default function Main() {
                             </S.MainContainerLogo>
                             <S.MainTextLionWrapper>
                                 <h2>고려대학교</h2>
-                                <img src={LikeLion.src}/>
+                                <img src={LikeLion.src} />
                             </S.MainTextLionWrapper>
                         </S.MainWrapper>
-                        <S.MainContainerBG src={MainBG.src} isMobile={isMobile} />
+                        <S.MainContainerBG
+                            src={MainBG.src}
+                            isMobile={isMobile}
+                        />
                     </S.MainContainer>
                     {/* <S.MainContainer>
             <S.MainWrapper isMobile={isMobile}>
@@ -71,28 +86,26 @@ export default function Main() {
                             <LaptopLottie />
                         </div>
                         <div>
-                            <p data-aos="fade">
-                                <b>생각</b>을 <b>행동</b>으로,
-                                <br /> <b>창업</b>을 <b>코딩</b>으로
-                            </p>
+                            <S.HomeTwoTextWrapper data-aos="fade">
+                                <img src={Text.src} />
+                            </S.HomeTwoTextWrapper>
                             <p
                                 style={{
-                                    marginTop: '10rem',
-                                    fontWeight: '700',
-                                    fontSize: '3rem',
+                                    marginTop: "10rem",
+                                    fontWeight: "700",
+                                    fontSize: "3rem",
                                 }}
                                 data-aos="fade"
                             >
                                 고려대학교 소프트웨어 창업학회
-                                <span>
-                                    &nbsp; NE<b>X</b>T
-                                </span>
+                                <S.NextInlineLogo src={Logo.src} alt="" />
+                                
                                 는
                             </p>
-                            <p style={{ marginTop: '10rem' }} data-aos="fade">
+                            <p style={{ marginTop: "10rem" }} data-aos="fade">
                                 다양한 전공과 경험을 가진 사람들이 모여
                                 <br />
-                                함께 소프트웨어 개발을 통해
+                                함께 <b>소프트웨어/ IT 창업</b>을 통해
                                 <br />
                                 세상의 여러 문제를 해결해 나가는 학회입니다
                             </p>
@@ -106,17 +119,29 @@ export default function Main() {
                             </span>
                         </S.TextWrapper>
                         <S.LottieContainer isMobile={isMobile}>
-                            <S.LottieWrapper isMobile={isMobile} data-aos="zoom-in" data-aos-delay="100">
+                            <S.LottieWrapper
+                                isMobile={isMobile}
+                                data-aos="zoom-in"
+                                data-aos-delay="100"
+                            >
                                 <SessionLottie />
                                 <h2>Session</h2>
                                 <p>필수 기술 스택 습득</p>
                             </S.LottieWrapper>
-                            <S.LottieWrapper isMobile={isMobile} data-aos="zoom-in" data-aos-delay="300">
+                            <S.LottieWrapper
+                                isMobile={isMobile}
+                                data-aos="zoom-in"
+                                data-aos-delay="300"
+                            >
                                 <ProjectLottie />
                                 <h2>Project</h2>
                                 <p>팀별 실전 서비스 개발</p>
                             </S.LottieWrapper>
-                            <S.LottieWrapper isMobile={isMobile} data-aos="zoom-in" data-aos-delay="500">
+                            <S.LottieWrapper
+                                isMobile={isMobile}
+                                data-aos="zoom-in"
+                                data-aos-delay="500"
+                            >
                                 <DemodayLottie />
                                 <h2>Demoday</h2>
                                 <p>서비스 검증 및 평가</p>
@@ -124,43 +149,49 @@ export default function Main() {
                             <S.ArrowBG isMobile={isMobile}></S.ArrowBG>
                         </S.LottieContainer>
 
-                        <S.LottieWrapper isMobile={isMobile} data-aos="zoom-in" data-aos-delay="100">
+                        <S.LottieWrapper
+                            isMobile={isMobile}
+                            data-aos="zoom-in"
+                            data-aos-delay="100"
+                        >
                             <RocketLottie />
 
                             <p>창업 경진대회 및 VC 투자 유치</p>
-                            <h2 style={{ fontSize: '3rem' }}>"창업"</h2>
+                            <h2 style={{ fontSize: "3rem" }}>"창업"</h2>
                         </S.LottieWrapper>
                         <div
                             style={{
-                                width: '100%',
-                                display: 'flex',
-                                justifyContent: 'flex-end',
-                                marginTop: '6rem',
+                                width: "100%",
+                                display: "flex",
+                                justifyContent: "flex-end",
+                                marginTop: "6rem",
                             }}
                         >
                             <S.MoreBtn
                                 isMobile={isMobile}
-                                onClick={() => router.push('activities')}
+                                onClick={() => router.push("activities")}
                                 // data-aos="fade"
                             >
                                 &gt;&gt;&nbsp; Activities 자세히 보기
                             </S.MoreBtn>
                         </div>
                     </S.Section2>
-                    <S.Section2 style={{ background: 'black' }}>
+                    <S.Section2 style={{ background: "black" }}>
                         <S.TextWrapper isMobile={isMobile} data-aos="fade">
                             <span>
                                 <b>Partners</b>
                             </span>
                             <p
                                 style={{
-                                    marginTop: '4rem',
-                                    marginBottom: '4rem',
-                                    fontWeight: '700',
+                                    marginTop: "4rem",
+                                    marginBottom: "4rem",
+                                    fontWeight: "700",
                                 }}
                             >
                                 <span>
-                                    고려대학교 소프트웨어 창업학회 NE<b>X</b>T 와 함께하는
+                                    고려대학교 소프트웨어 창업학회 &nbsp;
+                                    <S.NextInlineLogo src={Logo.src} width="100px" marginLeft="2px" marginRight="3px" />
+                                    와 함께하는
                                 </span>
                             </p>
                         </S.TextWrapper>

@@ -6,6 +6,7 @@ import { useMediaQuery } from "react-responsive";
 import homecoming from "public/assets/homecoming.jpg";
 import { Fade } from "react-awesome-reveal";
 import Slick from "components/slick/index";
+import Logo from "public/assets/logo.png";
 import { useRouter } from "next/router";
 export default function Sticky() {
   const isDesktop = useMediaQuery({ minDeviceWidth: 820 });
@@ -25,25 +26,23 @@ export default function Sticky() {
           </span>
           <p style={{ fontWeight: "700" }}>
             <span data-aos="fade">
-              <big>우리는 믿습니다.</big>
+              <big style={{fontSize: '4.7rem', fontWeight:'900'}}>우리는 믿습니다.</big>
             </span>
             <br />
-            <span data-aos="fade">
-              10년 안에 이곳에서 <big>유니콘 🦄</big>이 탄생할 것이라고.
+            <span data-aos="fade" style={{fontWeight: '500'}}>
+              10년 안에 이곳에서 <b style={{color:'white', fontWeight:'900'}}>유니콘</b> 🦄이 탄생할 것이라고.
             </span>
           </p>
           <p>
             <span data-aos="fade">
-              이곳&nbsp;
-              <span style={{ fontWeight: "700" }}>
-                NE<b>X</b>T
-              </span>
+              이곳
+              <S.NextInlineLogo src={Logo.src} width="100px"/>
               에서는
             </span>
             <br />
             <span data-aos="fade">
               다양한 스타트업이 만들어졌으며, IT 업계 전반에 많은 Alumni들이
-              진출해있습니다.
+              진출해 있습니다.
             </span>
           </p>
         </S.TextWrapper>

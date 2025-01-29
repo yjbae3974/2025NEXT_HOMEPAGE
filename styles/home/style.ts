@@ -60,7 +60,7 @@ export const MainContainerLogo = styled.div`
 export const MainWrapper = styled.div<{ isMobile: boolean }>`
     position: absolute;
     z-index: 2;
-    top: 40%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: ${(props) => (props.isMobile ? "80%" : "60%")};
@@ -74,6 +74,7 @@ export const MainTextWrapper = styled.div`
     width: 100%;
     margin-bottom: 5rem;
     & img {
+        min-width: 300px;
         width: 40%;
     }
     display: flex;
@@ -85,11 +86,17 @@ export const MainTextLionWrapper = styled.div`
     color: white;
     font-weight: 700;
     gap: 16px;
-    h2{
+    h2 {
         font-size: 3rem;
-        }
-    img{
-        width: 200px;}
+    }
+    img {
+        width: 200px;
+    }
+`;
+export const HomeTwoTextWrapper = styled.span`
+    & img {
+        width: 380px;
+    }
 `;
 export const Section1 = styled.div<{ isMobile: boolean }>`
     width: 100%;
@@ -161,10 +168,10 @@ export const TextWrapper = styled.div<{ isMobile: boolean }>`
     & p {
         line-height: 150%;
     }
-    & img {
-        width: 47%;
-        margin-top: 4rem;
-    }
+    // & img {
+    //     width: 47%;
+    //     margin-top: 4rem;
+    // }
     & > span {
         font-size: 3.6rem;
         font-weight: 600;
@@ -177,12 +184,27 @@ export const TextWrapper = styled.div<{ isMobile: boolean }>`
         css`
             font-size: 1.8rem;
             & img {
-                width: 100%;
+                // width: 100%;
             }
             & p {
                 width: 100%;
             }
         `}
+`;
+
+interface NextInlineLogoProps {
+    width?: string; 
+    marginLeft?: string; 
+    marginRight?: string;
+}
+
+export const NextInlineLogo = styled.img<NextInlineLogoProps>`
+    position: relative;
+    top: -3px;
+    width: ${({ width }) => width ?? "120px"};
+    display: inline-block;
+    margin-left: ${({ marginLeft }) => marginLeft ?? "10px"};
+    margin-right: ${({ marginRight }) => marginRight ?? "3px"};
 `;
 export const LottieContainer = styled.div<{ isMobile: boolean }>`
     width: 125%;
@@ -275,9 +297,12 @@ export const PartnerContainer = styled.div<{ isMobile: boolean }>`
     & div {
         width: 20%;
         margin: 2rem;
+        
     }
     & div img {
         width: 100%;
+        min-height: 140px;
+        object-fit: contain;
     }
     ${(props) =>
         props.isMobile &&

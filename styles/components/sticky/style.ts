@@ -53,6 +53,19 @@ export const StickyContent = styled.div<{ isMobile: boolean }>`
       }
     `}
 `;
+
+interface NextInlineLogoProps {
+  width?: string;
+}
+
+export const NextInlineLogo = styled.img<NextInlineLogoProps>`
+  position: relative;
+  top: -3px;
+  width: ${({ width }) => width || "120px"};
+  display: inline-block;
+  margin-left: 10px;
+  margin-right: 3px;
+`;
 export const Sticky = styled.div<{ isMobile: boolean }>`
   width: 100%;
   /* height: 100vh; */
