@@ -15,8 +15,9 @@ import { motion } from 'framer-motion';
 import S3upload from 'components/s3upload/index';
 import { useRecoilState } from 'recoil';
 import { joinModalOpen, isLaunched } from 'constants/atoms';
-import Text from 'public/assets/homeMainSmallLogo.png';
-import Logo from 'public/assets/logo.png';
+import Text from 'public/assets/Accelerate_Your_Potential.svg';
+import Logo from 'public/assets/new_logo(wh).svg';
+import LogoLikeLion from 'public/assets/likelion_kor_logo.svg';
 const variants = {
     open: { opacity: 1 },
     closed: { opacity: 0 },
@@ -96,11 +97,11 @@ export default function Join() {
                 <S.Container>
                     {!launch && (
                         <S.TitleWrapper isMobile={isMobile}>
-                            <img src={Text.src} />
+                            <img src={Text.src} style={{ width: '60%' }} />
                             <img src={Logo.src} />
-                            <p>12기 모집</p>
+                            <p>13기 모집</p>
                             <S.RocketInfo>
-                                <p>로켓을 클릭해보세요!</p>
+                                <p>로켓을 눌러보세요!</p>
                             </S.RocketInfo>
                         </S.TitleWrapper>
                     )}
@@ -231,9 +232,9 @@ export default function Join() {
                             <S.Rocket>
                                 <img src={RocketImg.src} />
                             </S.Rocket>
-                            <S.Fire launched={launch}>
+                            {/* <S.Fire launched={launch}>
                                 <FireLottie />
-                            </S.Fire>
+                            </S.Fire> */}
                         </S.RocketContainer>
 
                         <S.Planet launched={launch}>
