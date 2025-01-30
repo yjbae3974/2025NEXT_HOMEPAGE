@@ -13,7 +13,7 @@ import Greeting from "pages/about/components/greeting";
 import History from "pages/about/components/history";
 import Achievement from "pages/about/components/achievement";
 import { useRouter } from "next/router";
-const { INTRODUCTION, GREETING, HISTORY, ACHIEVEMENT, PARTNERS } = ABOUT_ITEMS;
+const { GREETING, HISTORY, ACHIEVEMENT, PARTNERS } = ABOUT_ITEMS;
 
 export default function About() {
   const router = useRouter();
@@ -53,29 +53,29 @@ export default function About() {
             onChange={(key) => setViewKey(key)}
             centered={isTabCenter}
             items={[
-              {
-                label: INTRODUCTION,
-                key: "1",
-                children: <Introduction />,
-              },
+              // {
+              //   label: INTRODUCTION,
+              //   key: "1",
+              //   children: <Introduction />,
+              // },
               {
                 label: GREETING,
-                key: "2",
+                key: "1",
                 children: <Greeting />,
               },
               {
                 label: HISTORY,
-                key: "3",
+                key: "2",
                 children: <History />,
               },
               {
                 label: ACHIEVEMENT,
-                key: "4",
+                key: "3",
                 children: <Achievement />,
               },
               {
                 label: PARTNERS,
-                key: "5",
+                key: "4",
                 children: <Partners />,
               },
             ]}

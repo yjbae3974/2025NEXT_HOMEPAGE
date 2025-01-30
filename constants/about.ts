@@ -1,5 +1,5 @@
 export const ABOUT_ITEMS = {
-    INTRODUCTION: 'Introduction',
+    // INTRODUCTION: 'Introduction',
     GREETING: 'Greeting',
     HISTORY: 'History',
     ACHIEVEMENT: 'Achievement',
