@@ -290,7 +290,7 @@ export const PEOPLE_INFORMATION: PEOPLE_INFORMATION_TYPE[] = [
         name: '김경진',
         department: DEPARTMENT.ELECTRONIC_ELECTRICAL_ENGINEERING,
         classOf: 22,
-        imgSrc: '/images/profile/11gen/기_김경진.png',
+        imgSrc: '/images/profile/11gen/11기_김경진.png',
         managementTeam: MANAGEMENT_TEAM_POSITION.NORMAL,
     },
     {

@@ -6,9 +6,9 @@ import "aos/dist/aos.css";
 import { useRouter } from "next/router";
 import SliderSlick from "components/sliderSlick/index";
 import { ProjectItem } from "constants/project";
-import Hackerton from "public/images/activities/project/hackerton.png";
-import SNUHackerton from "public/images/activities/project/SNUhackerton.png";
-import Longton from "public/images/activities/project/Longton.png";
+import hackathon_codeit from "public/images/activities/project/hackathon_codeit.jpg";
+import ideathon from "public/images/activities/project/ideathon.png"
+import product_day from "public/images/activities/project/product_day.jpg"
 
 export default function Curriculrum() {
   const [loading, setLoading] = useState(true);
@@ -28,34 +28,52 @@ export default function Curriculrum() {
           <S.MainContainer isMobile={isMobile}>
             <S.SessionWrapper isMobile={isMobile}>
               <S.SessionTitleBox isMobile={isMobile}>
-                <p>무박 2일 해커톤</p>
+                <p>아이디어톤</p>
               </S.SessionTitleBox>
               <S.SessionSemiTitleBox isMobile={isMobile}>
-                <p>5월 중순</p>
+                <p>5월 초</p>
               </S.SessionSemiTitleBox>
               <S.SessionInfoBox isMobile={isMobile}>
-                꿈꿔왔던 아이템을 개발 세션을 통해 배운 도구들로 직접
-                만들어봅니다. 제한된 시간 안에 아이디어를 선정하고 배포하는 것을
-                목표로 하며, 창업가로서의 협업 경험을 쌓습니다.
+                다양한 아이디어를 함께 고민하고 발전시켜 나가는 시간입니다. <br />
+                창의적인 발상과 팀원 간의 협업을 통해 새로운 가능성을 모색하며, <br />
+                간단한 아이디어부터 구체적인 계획까지 도출하는 경험을 쌓습니다.
               </S.SessionInfoBox>
-              <S.SessionImgBox>
-                <img src={Hackerton.src} alt="무박 해커톤" />
+              <S.SessionImgBox isMobile={isMobile}>
+                <img src={ideathon.src} alt="아이디어어톤" />
               </S.SessionImgBox>
             </S.SessionWrapper>
             <S.SessionWrapper isMobile={isMobile}>
               <S.SessionTitleBox isMobile={isMobile}>
-                <p>연합 4주 해커톤</p>
+                <p>5월 중순</p>
               </S.SessionTitleBox>
               <S.SessionSemiTitleBox isMobile={isMobile}>
-                <p>7월 한달</p>
+                <p>무박 해커톤</p>
               </S.SessionSemiTitleBox>
               <S.SessionInfoBox isMobile={isMobile}>
-                22번의 개발세션을 통해 배운 도구들을 활용해볼 수 있는
-                시간입니다. 4주 동안 새로운 팀원과 소통하면서 단순한 서비스의
-                구현보다는 실제 서비스 출시와 운영에 집중합니다.
+                꿈꿔왔던 아이템을 개발 세션을 통해 배운 도구들로 직접 만들어봅니다. <br />
+                제한된 시간 안에 아이디어를 선정하고 배포하는 것을 목표로 하며, <br />
+                창업가로서의 협업 경험을 쌓습니다. 
               </S.SessionInfoBox>
-              <S.SessionImgBox>
-                <img src={Longton.src} alt="연합 해커톤" />
+              <S.SessionImgBox isMobile={isMobile}>
+                <img src={hackathon_codeit.src} alt="무박해커톤" />
+              </S.SessionImgBox>
+            </S.SessionWrapper>
+            <S.SessionWrapper isMobile={isMobile}>
+              <S.SessionTitleBox isMobile={isMobile}>
+                <p>프로덕트 데이</p>
+              </S.SessionTitleBox>
+              <S.SessionSemiTitleBox isMobile={isMobile}>
+                <p>5-6월</p>
+              </S.SessionSemiTitleBox>
+              <S.SessionInfoBox isMobile={isMobile}>
+                4주동안 새로운 팀원들과 소통하며 단순한 서비스 구현을 넘어 <br />
+                실제 프로덕트 완성과 운영에 집중합니다. <br />
+                 
+                <br />
+
+              </S.SessionInfoBox>
+              <S.SessionImgBox isMobile={isMobile}>
+                <img src={product_day.src} alt="프로덕트 데이" />
               </S.SessionImgBox>
             </S.SessionWrapper>
             <S.ProjectExampleWrapper>

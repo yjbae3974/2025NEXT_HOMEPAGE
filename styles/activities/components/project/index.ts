@@ -21,29 +21,37 @@ export const MainContainer = styled.div<{ isMobile: boolean }>`
       padding: 0;
     `}
 
-  & > div:first-child {
-    border-right: 2px solid ${THEME.GRAY_200};
-  }
+  & > div:nth-child(1),
+& > div:nth-child(2) {
+  border-right: 2px solid ${THEME.GRAY_200};
+}
+& > div:nth-child(3) {
+  border-right: none;
+}
 `;
 
 export const SessionWrapper = styled.div<{ isMobile: boolean }>`
-  width: 45%;
+  width: 33%;
   height: 100%;
-  padding: 3% 2rem 3%;
-  margin-bottom: 2rem;
+  padding-top: 3%;
+  padding-bottom: 8%;
+
+  @media screen and (max-width: 500px) {
+    flex-direction: column;
+  }
 
   ${(props) =>
     props.isMobile &&
     css`
       width: 100%;
       height: 100%;
-      padding: 2% 0;
+      padding: 2% 0 10%;
       border: none !important;
     `}
 `;
 
 export const SessionImgBox = styled.div<{ isMobile: boolean }>`
-  width: 70%;
+  width: 90%;
   height: 100%;
   margin: 0 auto;
   margin-bottom: 3rem;

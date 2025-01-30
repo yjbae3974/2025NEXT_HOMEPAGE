@@ -5,8 +5,8 @@ import React, { useState, useEffect, useRef } from "react";
 import { useMediaQuery } from "react-responsive";
 import AOS from "aos";
 import SessionDev from "public/images/activities/session/session-development.png";
-import SessionStartup from "public/images/activities/session/session-startup.png";
-import SessionSpecial from "public/images/activities/session/session-special.png";
+import special_guest from "public/images/activities/session/session-special.jpg";
+import SessionStartup from "public/images/activities/session/session-startup_2024.jpg";
 import "aos/dist/aos.css";
 import { useRouter } from "next/router";
 
@@ -36,22 +36,22 @@ export default function Session() {
                 <p>매주 월, 목 19시 반 - 22시 반</p>
               </S.SessionTitleBox>
               <S.SessionInfoBox isMobile={isMobile}>
-                HTML, CSS, Django, Python, Javascript, React 등 웹과 앱 개발에
-                필요한 다양한 기술스택을 공부하며, 과제를 수행합니다.
+                HTML, CSS, Javascript, React, NEXT.js, Firebase 등
+                실전 창업과정에 적용 가능한 다양한 기술스택을 공부하며 과제를 수행합니다. 
               </S.SessionInfoBox>
             </S.SessionWrapper>
             <S.SessionWrapper isMobile={isMobile}>
               <S.SessionImgBox isMobile={isMobile}>
                 <Image
                   src={SessionStartup}
-                  alt="개발 세션"
+                  alt="창업 세션"
                   layout="intrinsic"
                 />
               </S.SessionImgBox>
               <S.SessionTitleBox isMobile={isMobile}>
                 <p>창업 세션</p>
                 <span />
-                <p>격주 토요일 15시 - 18시</p>
+                <p>매주 토요일 15시 - 18시</p>
               </S.SessionTitleBox>
               <S.SessionInfoBox isMobile={isMobile}>
                 서비스 기획 단계에서 필요한 창업적 마인드를 배운 후 프로젝트와
@@ -61,8 +61,8 @@ export default function Session() {
             <S.SessionWrapper isMobile={isMobile}>
               <S.SessionImgBox isMobile={isMobile}>
                 <Image
-                  src={SessionSpecial}
-                  alt="개발 세션"
+                  src={special_guest}
+                  alt="스페셜 세션"
                   layout="intrinsic"
                 />
               </S.SessionImgBox>
