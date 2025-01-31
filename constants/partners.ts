@@ -9,12 +9,15 @@ import startupStation from 'public/images/partners/startupStation.png';
 import campustown from 'public/images/partners/campusTown.png';
 import codeit from 'public/images/partners/codeit.png';
 import mesher from 'public/images/partners/mesher.png';
-import mashup from 'public/images/partners/mashup.png';
+import mashup from 'public/images/partners/mashup_ventures.svg';
 import aihub from 'public/images/partners/aihub.jpg';
 import zd from 'public/images/partners/zd.png';
 import koreaindustry from 'public/images/partners/koreaindustry.jpeg';
 import dunamu from 'public/images/partners/dunamu2.png';
 import fastventures from 'public/images/partners/fastventures2.png';
+import abovetech from 'public/images/partners/abovetech.png';
+import nonce from 'public/images/partners/nonce.png';
+import desker from 'public/images/partners/desker.svg';
 
 export const Partners = [
     { name: 'bass', src: bass },
@@ -22,10 +25,13 @@ export const Partners = [
     { name: 'futureplay', src: futureplay },
     { name: 'mashup', src: mashup },
     { name: 'dcamp', src: dcamp },
-    { name: 'aihub', src: aihub },
+    // { name: 'aihub', src: aihub },
+    { name: 'abovetech', src: abovetech },
     { name: 'mesher', src: mesher },
-    { name: 'dunamu', src: dunamu },
-    { name: 'fastventures', src: fastventures },
+    { name: 'nonce', src: nonce },
+    { name: 'desker', src: desker },
+    // { name: 'dunamu', src: dunamu },
+    // { name: 'fastventures', src: fastventures },
     // { name: "zd", src: zd },
     // { name: "eo", src: eo },
     { name: 'startupStation', src: startupStation },
@@ -33,3 +39,4 @@ export const Partners = [
     { name: 'koreaIndustry', src: koreaindustry },
     { name: 'campusTown', src: campustown },
 ];
+
