@@ -147,7 +147,7 @@ export const ProjectTextBox = styled.p`
   margin: 0 auto;
   background-color: ${THEME.BLACK_200};
   color: ${THEME.WHITE};
-  font-size: 2rem;
+  font-size: 2rem;==-
   line-height: 4rem;
   text-align: center;
 `;

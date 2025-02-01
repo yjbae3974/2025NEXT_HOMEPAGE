@@ -35,6 +35,7 @@ export enum DEPARTMENT {
     COMPUTER = '컴퓨터학과',
     STATISTICS = '통계학과',
     CHINESE_CHARACTER = '한문학과',
+    PHILOSPHY = '철학과',
 
 }
 
@@ -664,4 +665,12 @@ export const PEOPLE_INFORMATION: PEOPLE_INFORMATION_TYPE[] = [
         imgSrc: '/images/profile/12gen/12기_정재윤.png',
         managementTeam: MANAGEMENT_TEAM_POSITION.EDUCATION,
     },
+    {
+        gen: PEOPLE_ITEMS.TWELVE,
+        name: '조철종',
+        department: DEPARTMENT.PHILOSPHY,
+        classOf: 18,
+        imgSrc: '/images/profile/12gen/12기_조철종.png',
+        managementTeam: MANAGEMENT_TEAM_POSITION.NORMAL,
+    }
 ];
