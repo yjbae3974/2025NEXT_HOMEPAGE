@@ -56,8 +56,8 @@ export default function Join() {
         };
     }, []);
 
-    const startApplicationTime = new Date('2024-02-03T23:50:00');
-    const endApplicationTime = new Date('2024-02-19T23:59:00');
+    const startApplicationTime = new Date('2025-02-02T23:50:00');
+    const endApplicationTime = new Date('2025-02-15T23:59:00');
 
     let buttonText = '지원하기';
     let disabled = false;
@@ -136,36 +136,45 @@ export default function Join() {
                                             <span>1. 지원방식</span>
                                             <br /> a. 아래 <mark>[지원서 다운로드]</mark> 버튼을 클릭한 후 지원서 양식
                                             다운로드 <br />
-                                            b. 지원기간<b>(2월 7일 오전 0시 ~ 2월 18일 23시 59분)</b>
-                                            내에 지원서 작성 <br />
+                                            b. 서류 접수 기간 내에 지원서 작성 <br />
                                             c. 아래 <mark>[지원하기]</mark> 버튼을 클릭하여 지원서 업로드
                                             <br /> <b>**</b>[지원하기] 버튼은 지원 기간 중에만 확인 가능합니다.
                                             <br /> d. 모든 문항별 글자수는 공백을 포함한 글자수를 기준으로 합니다.
                                             <br />
                                             e. 제출한 지원서는 수정할 수 없습니다.
-                                            <br /> f. 세종캠퍼스 학생은 지원이 불가합니다. (세종캠퍼스 멋쟁이사자처럼
-                                            지원 가능)
                                             <br />
                                             <br />
                                             <span>2. 리크루팅 일정</span>
                                             <br />
-                                            1차 서류 결과 발표: 2월 22일 <br />
-                                            2차 면접: 2월 25일
+                                            서류접수 : 2/3(월) - 2/15(토) <br />
+                                            리크루팅 설명회 : 2/9(일) 오후 7시
                                             <br />
-                                            최종 합격 발표: 2월 29일
+                                            1차 합격자 발표 : 2/19(수)
+                                            <br />
+                                            면접전형 : 2/22(토) - 2/23(일)
+                                            <br />
+                                            최종 합격자 발표 : 2/26(수)
                                             <br />
                                             <br />
                                             <span>3. 수료 기준</span>
                                             <br />
-                                            세션 90% 이상 및 필수 행사에 참석하지 못할 경우 수료 불가합니다.
+                                            학회에서 1년 동안 진행하는 모든 세션 및 행사는 필참입니다.
+                                            <br />
+                                            불성실하게 참여하는 경우 수료에 제한이 생길 수 있음을 알려드립니다.
                                             <br />
                                             <br />
                                             <span>4. 면접 촬영 및 개인정보 수집 안내</span>
-                                            <br /> 면접 평가는 모두 <b>대면</b>으로 이뤄집니다. <br /> 공정한 면접
-                                            평가를 위해 면접 내용을 촬영 및 수집할 예정입니다.
+                                            <br /> 면접 평가는 모두 <b>대면</b>으로 이뤄집니다.
+                                            <br />
+                                            원활한 스케줄 조정을 위하여 2월22일(토), 23일(일) 중 가능한 시간대를 꼭
+                                            구글폼에 체크해주시면 감사하겠습니다
+                                            <br />
+                                            공정한 면접 평가를 위해 면접 내용을 촬영 및 수집할 예정입니다.
                                             <br />
                                             촬영한 면접영상 및 개인정보는 선발과정에서만 활용되며, 리크루팅 이후 즉시
-                                            폐기될 예정입니다. <br /> <br />
+                                            폐기될 예정입니다.
+                                            <br />
+                                            <br />
                                             <span>5. 학회비 안내</span> <br />
                                             원활한 학회 운영을 위해 학회비를 걷어 운영하고 있습니다.
                                             <br />
@@ -177,9 +186,8 @@ export default function Join() {
                                             <br />
                                             <span>6. 오리엔테이션 필참</span>
                                             <br />
-                                            최종 합격 이후 <b>3월 3일 15시~18시</b>, 스타트업 스테이션(경영본관 2층)에서
-                                            진행되는 OT는 필수 참여입니다. 원활한 학회 운영을 위해, OT를 고려하여 개인
-                                            일정을 조정해주시면 감사하겠습니다
+                                            최종 합격 이후 <b>3월 1일(토)</b>에 진행되는 OT는 필수 참여입니다. 원활한
+                                            학회 운영을 위해, OT를 고려하여 개인 일정을 조정해주시면 감사하겠습니다
                                         </p>
                                         <S.CheckContainer>
                                             <input
@@ -203,7 +211,7 @@ export default function Join() {
                                             <button
                                                 onClick={() =>
                                                     (location.href =
-                                                        'https://next-recruit.s3.ap-northeast-2.amazonaws.com/assets/2024_NEXT%EC%A7%80%EC%9B%90%EC%84%9C.docx')
+                                                        'https://docs.google.com/document/d/1YwJXlEUI1rnVQ95m_7TB7tO_IxwkgvlO/export?format=docx')
                                                 }
                                             >
                                                 지원서 다운로드
@@ -215,7 +223,8 @@ export default function Join() {
                                                         currentTime >= startApplicationTime &&
                                                         currentTime <= endApplicationTime
                                                     ) {
-                                                        setModalPage(2);
+                                                        location.href =
+                                                            'https://docs.google.com/forms/d/e/1FAIpQLSflklIDViHx8pV6O3QBd6tHYaGYhol6xGxIvjzZorH-fCy5Dw/viewform';
                                                     }
                                                 }}
                                             >
