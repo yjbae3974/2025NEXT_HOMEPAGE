@@ -40,7 +40,7 @@ export const TextWrapper = styled.div<{ isMobile: boolean }>`
   position: relative;
 
   font-size: 1.8rem; //sub-text
-  font-weight: 400;
+  font-weight: 500;
   word-break: keep-all;
   color: #000;
   overflow: hidden;
@@ -63,7 +63,7 @@ export const TextWrapper = styled.div<{ isMobile: boolean }>`
 
   & span b { //sub-text
     font-size: 1.8rem;
-    font-weight: 600;
+    font-weight: 700;
     color: ${THEME.ORANGE};
   }
 

@@ -9,13 +9,15 @@ import spaceImg from 'public/assets/space_pressed.jpg';
 // import spaceImg3 from "public/assets/space3.jpg";
 import ReactPannellum, { getConfig } from 'react-pannellum';
 import { FireLottie } from 'components/lottie/lottie';
-import RocketImg from 'public/assets/Rocket.png';
+import RocketImg from 'public/assets/joinus_rocket.png';
+import PlanetImg from 'public/assets/new_earth@4x.png';
 import { motion } from 'framer-motion';
 import S3upload from 'components/s3upload/index';
 import { useRecoilState } from 'recoil';
 import { joinModalOpen, isLaunched } from 'constants/atoms';
-import Text from 'public/assets/homeMainSmallLogo.png';
-import Logo from 'public/assets/logo.png';
+import Text from 'public/assets/Accelerate_Your_Potential.svg';
+import Logo from 'public/assets/new_logo(wh).svg';
+import LogoLikeLion from 'public/assets/likelion_kor_logo.svg';
 const variants = {
     open: { opacity: 1 },
     closed: { opacity: 0 },
@@ -95,11 +97,17 @@ export default function Join() {
                 <S.Container>
                     {!launch && (
                         <S.TitleWrapper isMobile={isMobile}>
-                            <img src={Text.src} />
+                            <img src={Text.src} style={{ width: '40%' }} />
                             <img src={Logo.src} />
-                            <p>12기 모집</p>
-                            <S.RocketInfo>
-                                <p>로켓을 클릭해보세요!</p>
+                            <div className="university-wrapper">
+                                <span>고려대학교</span>
+                                <img src={LogoLikeLion.src} />
+                            </div>
+                            <p>13기 모집</p>
+                            <S.RocketInfo className="rocket-info">
+                                <p>
+                                    <span className="rocket">로켓</span>을 눌러보세요!
+                                </p>
                             </S.RocketInfo>
                         </S.TitleWrapper>
                     )}
@@ -230,13 +238,13 @@ export default function Join() {
                             <S.Rocket>
                                 <img src={RocketImg.src} />
                             </S.Rocket>
-                            <S.Fire launched={launch}>
+                            {/* <S.Fire launched={launch}>
                                 <FireLottie />
-                            </S.Fire>
+                            </S.Fire> */}
                         </S.RocketContainer>
 
                         <S.Planet launched={launch}>
-                            <img draggable={false} src="https://media-public.canva.com/Y2Ods/MAD9dPY2Ods/1/tl.png" />
+                            <img draggable={false} src={PlanetImg.src} />
                         </S.Planet>
                     </S.SpaceContainer>
 

@@ -128,7 +128,7 @@ export const ImageWrapper = styled.div<{ isMobile: boolean }>`
         flex-direction: row !important;
         justify-content: space-between;
         & div {
-          width: 40%;
+          width: 20%;
           margin: 1rem;
         }
     `}

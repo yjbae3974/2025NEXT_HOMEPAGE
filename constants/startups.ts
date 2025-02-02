@@ -15,23 +15,29 @@ import zd from "public/images/startups/zd.png";
 import timebomb from "public/images/startups/timebomb.png";
 import petmorning from "public/images/startups/petmorning.jpg";
 import au from "public/images/startups/au.png";
+import abovetech from "public/images/startups/abovetech.png";
+import lucktime from "public/images/startups/lucktime.png";
+import loanfra from "public/images/startups/loanfra.svg";
 
 export const Startups = [
-  { name: "ailo", src: ailo },
-  { name: "chunmyung", src: chunmyung },
-  { name: "corona", src: corona },
-  { name: "donkey", src: donkey },
-  { name: "dreamary", src: dreamary },
-  { name: "gochin", src: gochin },
-  { name: "hau", src: hau },
-  { name: "jocoding", src: jocoding },
-  { name: "mask", src: mask },
-  { name: "mesher", src: mesher },
-  { name: "sugang", src: sugang },
-  { name: "taling", src: taling },
-  { name: "yeongoring", src: yeongoring },
-  { name: "zd", src: zd },
-  { name: "timebomb", src: timebomb },
-  { name: "petmorning", src: petmorning },
+    { name: "ailo", src: ailo },
+    { name: "chunmyung", src: chunmyung },
+    { name: "taling", src: taling },
+    { name: "abovetech", src: abovetech },
+    { name: "mesher", src: mesher },
+    { name: "loanfra", src: loanfra },
+    { name: "hau", src: hau },
+    { name: "jocoding", src: jocoding },
+    { name: "mask", src: mask },
+    { name: "sugang", src: sugang },
+    { name: "corona", src: corona },
+    { name: "lucktime", src: lucktime },
+    { name: "yeongoring", src: yeongoring },
+    { name: "zd", src: zd },
+    { name: "timebomb", src: timebomb },
+    { name: "petmorning", src: petmorning },
+    // { name: "donkey", src: donkey },
+    // { name: "dreamary", src: dreamary },
+    // { name: "gochin", src: gochin },
   // { name: "au", src: au },
 ];

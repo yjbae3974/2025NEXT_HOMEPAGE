@@ -1,5 +1,5 @@
 export const ABOUT_ITEMS = {
-    INTRODUCTION: 'Introduction',
+    // INTRODUCTION: 'Introduction',
     GREETING: 'Greeting',
     HISTORY: 'History',
     ACHIEVEMENT: 'Achievement',
@@ -12,27 +12,38 @@ export const ABOUT_ITEMS = {
 //3=alumni 활동이긴 한데 뱃지 안 달아
 export const ABOUT_HISTORY = [
     {
-        YEAR: '2024',
-        TITLE: 'NEXT x Likelion 12기',
+        YEAR: '2025',
+        TITLE: 'NEXT(고려대학교 멋쟁이사자처럼) 13기',
         CONTENT: [
-            ['장고 -> 노드 기반 세션 전환', 0],
-            ['창업으로 세상을 바꿔가는 중', 0],
+            
+        ],
+    },
+    {
+        YEAR: '2024',
+        TITLE: 'NEXT(고려대학교 멋쟁이사자처럼) 12기',
+        CONTENT: [
+            ['데스커 베이스캠프 with nonce 입주 커뮤니티 선정', 0],
+            ['바카티오 60억원 규모 시리즈A 투자 유치', 0],
+            ['어보브테크, 리안헤어와 AI 헤어플랫폼 구축을 위한 업무협약(MOU)을 체결', 0],
+            ['론프라, Seed 투자 유치 / 중소벤처기업부 TIPS 선정', 0],
+            ['2024 고려대학교 미래내일일경험 사업 1,2위 수상', 0]
         ],
     },
     {
         YEAR: '2023',
-        TITLE: 'NEXT x Likelion 11기',
+        TITLE: 'NEXT(고려대학교 멋쟁이사자처럼) 11기',
         CONTENT: [
             ['학회 내부팀 절반 이상 스타트업 익스프레스 15기, 16기 입주', 0],
             ['2023 SW 마에스트로 14기 다수 배출', 0],
             ['서울시 주최 Y-deathon 다수 입상', 0],
             ['구글, NCSOFT, 토스, 삼성전자, LG CNS, 국내 카드사 등 개발자, PM, 엔지니어 다수 배출', 0],
+            ['아일로, 중소벤처기업부 창업성장기술개발 TIPS 선정', 0],
         ],
     },
 
     {
         YEAR: '2022',
-        TITLE: 'NEXT x Likelion 10기',
+        TITLE: 'NEXT(고려대학교 멋쟁이사자처럼) 10기',
         CONTENT: [
             ['점술 상담 중개 플랫폼 ‘천명’ 시리즈A 투자 유치', 0],
             ['Web3 어플리케이션 스튜디오 ‘메셔’ 이더리움 글로벌 해커톤 우승', 0],
@@ -43,7 +54,7 @@ export const ABOUT_HISTORY = [
     },
     {
         YEAR: '2021',
-        TITLE: 'NEXT x Likelion 9기',
+        TITLE: 'NEXT(고려대학교 멋쟁이사자처럼) 9기',
         CONTENT: [
             ['고려대 수강신청 알리미 리뉴얼', 0],
             ['하플, 돈키, 연고링 서비스 출시', 0],
@@ -52,7 +63,7 @@ export const ABOUT_HISTORY = [
     },
     {
         YEAR: '2020',
-        TITLE: 'NEXT x Likelion 8기',
+        TITLE: 'NEXT(고려대학교 멋쟁이사자처럼) 8기',
         CONTENT: [
             ['고려대 수강신청 알리미 서비스 출시', 0],
             ['네이버, 삼성 SDS, LG CNS, 뱅크샐러드 등 개발직군 취업 多', 0],
@@ -60,7 +71,7 @@ export const ABOUT_HISTORY = [
     },
     {
         YEAR: '2019',
-        TITLE: 'NEXT x Likelion 7기',
+        TITLE: 'NEXT(고려대학교 멋쟁이사자처럼) 7기',
         CONTENT: [
             ['루비 온 레일즈 -> 장고 기반 세션 전환', 0],
             ['코로나 알리미 MAU 300만/마스크 알리미 MAU 2000만 돌파 및 각종 언론 인터뷰', 0],

@@ -4,7 +4,7 @@ import { useMediaQuery } from 'react-responsive';
 import { Partners as PartnersItems } from 'constants/partners';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-
+import blackLogo from 'public/assets/new_logo(bl).svg';
 export const DESKTOP_TAB = {
     width: '100%',
     margin: '0 auto 2rem auto',
@@ -28,14 +28,24 @@ export default function Partners() {
                 <S.TextWrapper isMobile={isMobile}>
                     <p>
                         <span>
-                            고려대학교 소프트웨어 창업학회 NE<b className="titleX">X</b>T는
+                            고려대학교 소프트웨어 창업학회 
+                            <img
+                                src={blackLogo.src}
+                                alt="NEXT"
+                                style={{
+                                    height: '1em',
+                                    verticalAlign: 'top',
+                                    margin: '0 5px',
+                                    display: 'inline-block',
+                                }}
+                            />는
                         </span>
                     </p>
                     <p>
                         교내 창업지원단체와 교육 기업, <br />
                         그리고 다양한 VC와 긴밀하게 협력하고 있습니다 <br />
                     </p>
-                    <p>협업 관련 문의는 next.recruit@gmail.com으로 부탁드립니다</p>
+                    <p>협업 관련 문의는 nextku.contact@gmail.com으로 부탁드립니다</p>
                 </S.TextWrapper>
                 <S.ImageWrapper isMobile={isMobile} className="mount">
                     {PartnersItems.map(({ name, src }) => (
