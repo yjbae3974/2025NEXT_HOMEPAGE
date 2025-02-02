@@ -11,7 +11,7 @@ import Member from './components/Member';
 import { PEOPLE_INFORMATION } from 'constants/people';
 import Cardnews from './components/Cardnews';
 
-const { TEN, ELEVEN } = PEOPLE_ITEMS;
+const { TEN, ELEVEN, TWELVE } = PEOPLE_ITEMS;
 
 export default function People() {
     const router = useRouter();
@@ -56,6 +56,13 @@ export default function People() {
                                     <Member peopleInformation={PEOPLE_INFORMATION.filter((item) => item.gen === 11)} />
                                 ),
                             },
+                            {
+                                label: `${TWELVE}기`,
+                                key: '4',
+                                children: (
+                                    <Member peopleInformation={PEOPLE_INFORMATION.filter((item) => item.gen === 12)} />
+                                ),
+                            }
                         ]}
                     />
                 </S.Container>
