@@ -3,7 +3,7 @@ import Image from 'next/image';
 import React, { useState, useEffect } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import AOS from 'aos';
-import CurriculumDesktop from 'public/images/activities/curriculum/curriculum-desktop.png';
+import CurriculumDesktop from 'public/images/activities/curriculum/2025curriculum-vertical.png';
 import CurriculumMobile from 'public/images/activities/curriculum/curriculum-mobile.png';
 import 'aos/dist/aos.css';
 import { useRouter } from 'next/router';
@@ -32,11 +32,11 @@ export default function Curriculrum() {
                             <p className="sub-text">
                                 기본적인 <b>개발 능력을 갖춘 창업자</b>로 성장합니다.
                             </p>
-                            <p className="test">
+                            {/* <p className="test">
                                 📌 아래 세션 일정은 1학기 기준으로, 2학기 세션 일정은 학회 내부 공지 예정입니다.
-                            </p>
+                            </p> */}
                         </S.TextWrapper>
-                        <S.ScheduleContainer isMobile={isMobile}>
+                        {/* <S.ScheduleContainer isMobile={isMobile}>
                             <S.ScheduleWrapper isMobile={isMobile}>
                                 <S.ScheduleEventBox>
                                     <p>22</p>
@@ -85,10 +85,10 @@ export default function Curriculrum() {
                                     <p>데모데이</p>
                                 </S.ScheduleInfoBox>
                             </S.ScheduleWrapper>
-                        </S.ScheduleContainer>
+                        </S.ScheduleContainer> */}
                         <S.LottieContainer isMobile={isMobile}>
                             {isMobile ? (
-                                <Image layout="intrinsic" alt="CurriculumMobile" src={CurriculumMobile} />
+                                <Image layout="intrinsic" alt="CurriculumMobile" src={CurriculumDesktop} />
                             ) : (
                                 <Image layout="intrinsic" alt="CurriculumDesktop" src={CurriculumDesktop} />
                             )}

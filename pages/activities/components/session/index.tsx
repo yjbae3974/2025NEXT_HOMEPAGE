@@ -5,7 +5,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { useMediaQuery } from "react-responsive";
 import AOS from "aos";
 import SessionDev from "public/images/activities/session/session-development.png";
-import special_guest from "public/images/activities/session/session-special.jpg";
+import special_guest from "public/images/activities/session/session-special2025.jpg";
 import SessionStartup from "public/images/activities/session/session-startup_2024.jpg";
 import "aos/dist/aos.css";
 import { useRouter } from "next/router";

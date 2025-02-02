@@ -19,6 +19,11 @@ export const Container = styled.div<{ isMobile: boolean }>`
 export const MainContainer = styled.div<{ isMobile: boolean }>`
   width: 80%;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
 
   ${(props) =>
     props.isMobile &&
@@ -28,6 +33,9 @@ export const MainContainer = styled.div<{ isMobile: boolean }>`
 `;
 
 export const TextWrapper = styled.div<{ isMobile: boolean }>`
+  flex: 1;
+  min-width: 300px;
+  margin-left: 20%;
   width: 100%;
   word-break: keep-all;
   color: #333333;
@@ -42,9 +50,8 @@ export const TextWrapper = styled.div<{ isMobile: boolean }>`
 
   & .main-text {
     font-size: 2.4rem;
-    color: #333333;
-    margin-bottom: 3rem;
     color: ${THEME.ORANGE};
+    margin-bottom: 3rem;
   }
 
   & .sub-text {
@@ -63,7 +70,6 @@ export const TextWrapper = styled.div<{ isMobile: boolean }>`
     css`
       & .main-text {
         font-size: 2rem;
-        color: #333333;
         color: ${THEME.ORANGE};
       }
 
@@ -85,6 +91,31 @@ export const TextWrapper = styled.div<{ isMobile: boolean }>`
         width: 100%;
       }
     `}
+`;
+
+export const LottieContainer = styled.div<{ isMobile: boolean }>`
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 6rem 10%;
+  position: relative;
+  /* background: radial-gradient(
+    circle farthest-side at 50% 100%,
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0)
+  ); */
+  /* background: linear-gradient(); */
+  ${(props) =>
+    props.isMobile &&
+    css`
+      flex-direction: column;
+      align-items: center;
+      padding: 0rem 7rem;
+    `}
+
+  @media screen and (max-width: 530px) {
+    padding: 0;
+  }
 `;
 
 export const ScheduleContainer = styled.div<{ isMobile: boolean }>`
@@ -223,27 +254,3 @@ export const ScheduleInfoBox = styled.div`
   }
 `;
 
-export const LottieContainer = styled.div<{ isMobile: boolean }>`
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  padding: 6rem 10%;
-  position: relative;
-  /* background: radial-gradient(
-    circle farthest-side at 50% 100%,
-    rgba(255, 255, 255, 0.5),
-    rgba(255, 255, 255, 0)
-  ); */
-  /* background: linear-gradient(); */
-  ${(props) =>
-    props.isMobile &&
-    css`
-      flex-direction: column;
-      align-items: center;
-      padding: 0rem 7rem;
-    `}
-
-  @media screen and (max-width: 530px) {
-    padding: 0;
-  }
-`;
