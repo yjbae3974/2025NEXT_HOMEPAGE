@@ -15,7 +15,7 @@ import zd from 'public/images/partners/zd.png';
 import koreaindustry from 'public/images/partners/koreaindustry.jpeg';
 import dunamu from 'public/images/partners/dunamu2.png';
 import fastventures from 'public/images/partners/fastventures2.png';
-import abovetech from 'public/images/partners/AboveTech.png';
+import abovetech from 'public/images/partners/abovetech.png';
 import nonce from 'public/images/partners/nonce.png';
 import desker from 'public/images/partners/desker.svg';
 

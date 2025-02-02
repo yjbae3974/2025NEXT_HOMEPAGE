@@ -15,7 +15,7 @@ import zd from "public/images/startups/zd.png";
 import timebomb from "public/images/startups/timebomb.png";
 import petmorning from "public/images/startups/petmorning.jpg";
 import au from "public/images/startups/au.png";
-import abovetech from "public/images/startups/AboveTech.png";
+import abovetech from "public/images/startups/abovetech.png";
 import lucktime from "public/images/startups/lucktime.png";
 import loanfra from "public/images/startups/loanfra.svg";
 
