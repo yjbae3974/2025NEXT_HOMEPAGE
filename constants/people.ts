@@ -45,6 +45,10 @@ export enum MANAGEMENT_TEAM_POSITION {
     EDUCATION = '학술부',
     PROJECT_MANAGER = '기획부',
     NORMAL = '',
+    DEVELOPER = '개발팀',
+    STARTUP = '창업팀',
+    DEVELOPERLEADER = '개발팀장',
+    STARTUPLEADER = '창업팀장',
 }
 
 export const PEOPLE_INFORMATION: PEOPLE_INFORMATION_TYPE[] = [
@@ -494,7 +498,7 @@ export const PEOPLE_INFORMATION: PEOPLE_INFORMATION_TYPE[] = [
         department: DEPARTMENT.BUSINESS,
         classOf: 21,
         imgSrc: '/images/profile/12gen/12기_김도원.png',
-        managementTeam: MANAGEMENT_TEAM_POSITION.EDUCATION,
+        managementTeam: MANAGEMENT_TEAM_POSITION.DEVELOPER,
     },
     {
         gen: PEOPLE_ITEMS.TWELVE,
@@ -502,7 +506,7 @@ export const PEOPLE_INFORMATION: PEOPLE_INFORMATION_TYPE[] = [
         department: DEPARTMENT.HEALTH_POLICY_AND_MANAGEMENT,
         classOf: 19,
         imgSrc: '/images/profile/12gen/12기_김상우.png',
-        managementTeam: MANAGEMENT_TEAM_POSITION.EDUCATION,
+        managementTeam: MANAGEMENT_TEAM_POSITION.DEVELOPER,
     },
     {
         gen: PEOPLE_ITEMS.TWELVE,
@@ -510,7 +514,7 @@ export const PEOPLE_INFORMATION: PEOPLE_INFORMATION_TYPE[] = [
         department: DEPARTMENT.BUSINESS,
         classOf: 21,
         imgSrc: '/images/profile/12gen/12기_김성민.png',
-        managementTeam: MANAGEMENT_TEAM_POSITION.PROJECT_MANAGER,
+        managementTeam: MANAGEMENT_TEAM_POSITION.STARTUP,
     },
     {
         gen: PEOPLE_ITEMS.TWELVE,
@@ -518,7 +522,7 @@ export const PEOPLE_INFORMATION: PEOPLE_INFORMATION_TYPE[] = [
         department: DEPARTMENT.RUSSIAN_LANGUAGE_AND_LITERATURE,
         classOf: 19,
         imgSrc: '/images/profile/12gen/12기_김세현.png',
-        managementTeam: MANAGEMENT_TEAM_POSITION.PROJECT_MANAGER,
+        managementTeam: MANAGEMENT_TEAM_POSITION.STARTUP,
     },
     
     {
@@ -535,7 +539,7 @@ export const PEOPLE_INFORMATION: PEOPLE_INFORMATION_TYPE[] = [
         department: DEPARTMENT.DESIGN,
         classOf: 21,
         imgSrc: '/images/profile/12gen/12기_김수빈.png',
-        managementTeam: MANAGEMENT_TEAM_POSITION.PROJECT_MANAGER,
+        managementTeam: MANAGEMENT_TEAM_POSITION.STARTUP,
     },
     {
         gen: PEOPLE_ITEMS.TWELVE,
@@ -551,7 +555,7 @@ export const PEOPLE_INFORMATION: PEOPLE_INFORMATION_TYPE[] = [
         department: DEPARTMENT.ENGLISH,
         classOf: 23,
         imgSrc: '/images/profile/12gen/12기_김은성.png',
-        managementTeam: MANAGEMENT_TEAM_POSITION.EDUCATION,
+        managementTeam: MANAGEMENT_TEAM_POSITION.DEVELOPER,
     },
     {
         gen: PEOPLE_ITEMS.TWELVE,
@@ -567,7 +571,7 @@ export const PEOPLE_INFORMATION: PEOPLE_INFORMATION_TYPE[] = [
         department: DEPARTMENT.MEDIA,
         classOf: 21,
         imgSrc: '/images/profile/12gen/12기_문도경.png',
-        managementTeam: MANAGEMENT_TEAM_POSITION.PROJECT_MANAGER,
+        managementTeam: MANAGEMENT_TEAM_POSITION.STARTUP,
     },
     {
         gen: PEOPLE_ITEMS.TWELVE,
@@ -583,7 +587,7 @@ export const PEOPLE_INFORMATION: PEOPLE_INFORMATION_TYPE[] = [
         department: DEPARTMENT.CHINESE_CHARACTER,
         classOf: 22,
         imgSrc: '/images/profile/12gen/12기_박지은.png',
-        managementTeam: MANAGEMENT_TEAM_POSITION.PROJECT_MANAGER,
+        managementTeam: MANAGEMENT_TEAM_POSITION.STARTUP,
     },
     {
         gen: PEOPLE_ITEMS.TWELVE,
@@ -591,7 +595,7 @@ export const PEOPLE_INFORMATION: PEOPLE_INFORMATION_TYPE[] = [
         department: DEPARTMENT.ELECTRONIC_ELECTRICAL_ENGINEERING,
         classOf: 21,
         imgSrc: '/images/profile/12gen/12기_배연준.png',
-        managementTeam: MANAGEMENT_TEAM_POSITION.EXECUTIVE,
+        managementTeam: MANAGEMENT_TEAM_POSITION.DEVELOPERLEADER,
     },
     {
         gen: PEOPLE_ITEMS.TWELVE,
@@ -607,7 +611,7 @@ export const PEOPLE_INFORMATION: PEOPLE_INFORMATION_TYPE[] = [
         department: DEPARTMENT.BUSINESS,
         classOf: 20,
         imgSrc: '/images/profile/12gen/12기_신현성.png',
-        managementTeam: MANAGEMENT_TEAM_POSITION.EXECUTIVE,
+        managementTeam: MANAGEMENT_TEAM_POSITION.STARTUPLEADER,
     },
     {
         gen: PEOPLE_ITEMS.TWELVE,
@@ -615,7 +619,7 @@ export const PEOPLE_INFORMATION: PEOPLE_INFORMATION_TYPE[] = [
         department: DEPARTMENT.BUSINESS,
         classOf: 23,
         imgSrc: '/images/profile/12gen/12기_윤소영.png',
-        managementTeam: MANAGEMENT_TEAM_POSITION.PROJECT_MANAGER,
+        managementTeam: MANAGEMENT_TEAM_POSITION.STARTUP,
     },
     {
         gen: PEOPLE_ITEMS.TWELVE,
@@ -623,7 +627,7 @@ export const PEOPLE_INFORMATION: PEOPLE_INFORMATION_TYPE[] = [
         department: DEPARTMENT.DESIGN,
         classOf: 20,
         imgSrc: '/images/profile/12gen/12기_이민지.png',
-        managementTeam: MANAGEMENT_TEAM_POSITION.PROJECT_MANAGER,
+        managementTeam: MANAGEMENT_TEAM_POSITION.STARTUP,
     },
     {
         gen: PEOPLE_ITEMS.TWELVE,
@@ -639,7 +643,7 @@ export const PEOPLE_INFORMATION: PEOPLE_INFORMATION_TYPE[] = [
         department: DEPARTMENT.ELECTRONIC_ELECTRICAL_ENGINEERING,
         classOf: 21,
         imgSrc: '/images/profile/12gen/12기_임도현.png',
-        managementTeam: MANAGEMENT_TEAM_POSITION.PROJECT_MANAGER,
+        managementTeam: MANAGEMENT_TEAM_POSITION.STARTUP,
     },
     {
         gen: PEOPLE_ITEMS.TWELVE,
@@ -647,7 +651,7 @@ export const PEOPLE_INFORMATION: PEOPLE_INFORMATION_TYPE[] = [
         department: DEPARTMENT.CHINESE_LANGUAGE_AND_LITERATURE,
         classOf: 20,
         imgSrc: '/images/profile/12gen/12기_정영헌.png',
-        managementTeam: MANAGEMENT_TEAM_POSITION.EDUCATION,
+        managementTeam: MANAGEMENT_TEAM_POSITION.DEVELOPER,
     },
     {
         gen: PEOPLE_ITEMS.TWELVE,
@@ -655,7 +659,7 @@ export const PEOPLE_INFORMATION: PEOPLE_INFORMATION_TYPE[] = [
         department: DEPARTMENT.CONVERGENCE_ENERGY_ENGINEERING,
         classOf: 21,
         imgSrc: '/images/profile/12gen/12기_정유철.png',
-        managementTeam: MANAGEMENT_TEAM_POSITION.EDUCATION,
+        managementTeam: MANAGEMENT_TEAM_POSITION.DEVELOPER,
     },
     {
         gen: PEOPLE_ITEMS.TWELVE,
@@ -663,7 +667,7 @@ export const PEOPLE_INFORMATION: PEOPLE_INFORMATION_TYPE[] = [
         department: DEPARTMENT.ELECTRONIC_ELECTRICAL_ENGINEERING,
         classOf: 21,
         imgSrc: '/images/profile/12gen/12기_정재윤.png',
-        managementTeam: MANAGEMENT_TEAM_POSITION.EDUCATION,
+        managementTeam: MANAGEMENT_TEAM_POSITION.DEVELOPER,
     },
     {
         gen: PEOPLE_ITEMS.TWELVE,
