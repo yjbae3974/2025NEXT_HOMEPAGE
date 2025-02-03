@@ -211,7 +211,7 @@ export default function Join() {
                                             <button
                                                 onClick={() =>
                                                     (location.href =
-                                                        'https://docs.google.com/document/d/1tRFraG7VgnspLBwhsCPx9iTukj797o1S/export?format=docx')
+                                                        'https://docs.google.com/document/d/18Q33ghiQllUNdZjMVF_8zU5CUH3W1vl8/export?format=docx')
                                                 }
                                             >
                                                 지원서 다운로드
