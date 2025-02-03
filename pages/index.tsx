@@ -14,7 +14,7 @@ export default function Home() {
         <title>NEXT</title>
         <meta name="description" content="고려대학교 소프트웨어창업학회 NEXT" />
         <meta name="description" content="🚀Acclerate Your Potential! NEXT(고려대학교 멋쟁이사자처럼)" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.svg" />
       </Head>
       <h2>헤더 반응 테스트용. 사라질 페이지. /home에서 시작할 예정</h2>
       <div style={{ width: "100%", height: "300vh", background: "grey" }}></div>
