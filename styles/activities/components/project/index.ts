@@ -13,6 +13,7 @@ export const MainContainer = styled.div<{ isMobile: boolean }>`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  padding: 0;
   box-sizing: border-box;
 
   ${(props) =>
@@ -35,9 +36,13 @@ export const SessionWrapper = styled.div<{ isMobile: boolean }>`
   height: 100%;
   padding-top: 3%;
   padding-bottom: 8%;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 1rem;
 
   @media screen and (max-width: 500px) {
     flex-direction: column;
+    width: 100%;
   }
 
   ${(props) =>
@@ -48,11 +53,15 @@ export const SessionWrapper = styled.div<{ isMobile: boolean }>`
       padding: 2% 0 10%;
       border: none !important;
     `}
+    img {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: contain;
+  }
 `;
 
 export const SessionImgBox = styled.div<{ isMobile: boolean }>`
   width: 90%;
-  height: 100%;
   margin: 0 auto;
   margin-bottom: 3rem;
 
@@ -74,7 +83,7 @@ export const SessionTitleBox = styled.div<{ isMobile: boolean }>`
   margin: 0 auto;
   display: flex;
   align-items: center;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
 
   & > p {
     color: ${THEME.ORANGE};
@@ -138,6 +147,25 @@ export const ProjectExampleWrapper = styled.div`
   width: 90%;
   margin: 0 auto;
   margin-bottom: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  @media screen and (max-width: 955px) {
+    flex-direction: column;
+  }
+
+  @media screen and (max-width: 820px) {
+    flex-direction: row;
+  }
+
+  img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+    object-fit: contain;
+  }
 `;
 
 export const ProjectTextBox = styled.p`

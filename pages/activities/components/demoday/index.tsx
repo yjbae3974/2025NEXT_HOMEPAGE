@@ -17,6 +17,7 @@ import SliderSlick from "components/sliderSlick/index";
 import ImageSlider from "components/imageSlider/index";
 import { DemoItem } from "constants/demo.ts";
 
+
 export default function Curriculrum() {
   const router = useRouter();
   const [loading, setLoading] = useState(true);
@@ -41,21 +42,10 @@ export default function Curriculrum() {
               <S.SessionTitleBox isMobile={isMobile}>
                 최종 데모데이
               </S.SessionTitleBox>
-              <S.SessionInfoBox isMobile={isMobile}>
-                <p>
-                  2학기 활동의 결과물을 알럼나이 및 투자심사역 앞에서 발표하고,
-                  <br />
-                  최종 창업 진행 여부를 결정합니다.
-                </p>
-              </S.SessionInfoBox>
-              <S.SessionDayBox isMobile={isMobile}>
-                ㅣ12월 예정 ㅣ
-              </S.SessionDayBox>
             </S.SessionWrapper>
-
             <S.SessionWrapper isMobile={isMobile}>
               <S.ProjectExampleWrapper>
-                <S.ProjectTextBox>2023 NEXT 창업팀</S.ProjectTextBox>
+
                 {/* <SliderSlick
                     slideItemGroup={ProjectItem}
                     slideShowGroup={3}
@@ -68,6 +58,12 @@ export default function Curriculrum() {
                 </S.ProjectImgBox> */}
               </S.ProjectExampleWrapper>
             </S.SessionWrapper>
+            <S.SessionInfoBox isMobile={isMobile}>
+                <p>
+                2학기 창업 아이템을 메이저 VC 하우스 투자심사역 앞에서 발표하고 최종 창업 진행 여부를 결정합니다. <br />
+                해당 과정에서 받은 투자심사역 분들의 피드백과 알럼나이 분들의 도움과 함께 학회 이후의 후속 창업 여부를 결정합니다.
+                </p>
+              </S.SessionInfoBox>
           </S.MainContainer>
         </S.Container>
       )}

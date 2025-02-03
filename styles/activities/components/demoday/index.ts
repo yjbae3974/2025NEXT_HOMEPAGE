@@ -14,8 +14,9 @@ export const MainContainer = styled.div<{ isMobile: boolean }>`
   padding-top: 5rem;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   box-sizing: border-box;
+
 
   & > div:last-child {
     border-right: none;
@@ -50,8 +51,12 @@ export const MainContainer = styled.div<{ isMobile: boolean }>`
 export const SessionWrapper = styled.div<{ isMobile: boolean }>`
   position: relative;
   width: 50%;
-  height: 60rem;
+  height: 32rem;
   text-align: center;
+    &:first-child {
+    margin-top: 2%;
+  }
+
 
   /* &:after {
     content: "";
@@ -98,7 +103,7 @@ export const SessionImgBox = styled.div<{ isMobile: boolean }>`
   /* &:before {
     content: "";
     width: 100%;
-    padding-bottom: 100%;
+    padding-bottom: 50%;
   } */
 `;
 
@@ -123,7 +128,7 @@ export const SessionInfoBox = styled.p<{ isMobile: boolean }>`
   justify-content: space-between;
   height: 9rem;
   & p {
-    width: 90%;
+    width: 100%;
 
     margin: 0 auto;
     word-break: keep-all;
@@ -137,7 +142,7 @@ export const SessionInfoBox = styled.p<{ isMobile: boolean }>`
   @media screen and (max-width: 710px) {
     font-size: 1.5rem;
     font-weight: 600;
-    margin-bottom: 4rem;
+    margin-bottom: 1rem;
     height: auto;
   }
 `;
