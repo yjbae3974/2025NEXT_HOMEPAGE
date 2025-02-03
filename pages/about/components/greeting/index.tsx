@@ -108,6 +108,7 @@ export default function Greeting() {
                                 justifyContent: 'flex-end',
                                 fontWeight: '400',
                                 fontSize: '1em',
+                                flexWrap: 'wrap',
                             }}
                         >
                             <b style={{ color: '#000', fontWeight: '500', paddingLeft: '3px' }}>대표</b>

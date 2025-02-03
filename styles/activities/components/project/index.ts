@@ -178,6 +178,7 @@ export const ProjectTextBox = styled.p`
   font-size: 2rem;==-
   line-height: 4rem;
   text-align: center;
+  padding: 0px 5rem;
 `;
 
 export const SlideWrapper = styled.p`
