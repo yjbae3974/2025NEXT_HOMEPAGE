@@ -72,6 +72,31 @@ export const ImageWrapper = styled.div`
     justify-content: center;
 `;
 
+
+export const ImageSpanWrapper = styled.span`
+  display: inline-flex;
+  align-items: center;
+
+  img {
+    height: auto;
+    max-height: 16px; /* 기본 크기 */
+    width: auto;
+    vertical-align: middle;
+    margin: 0 3px;
+    display: inline-block;
+
+    /* 미디어 쿼리: 모바일 화면에서 크기 조절 */
+    @media (max-width: 820px) {
+      max-height: 16px; /* 모바일에서 크기를 줄임 */
+    }
+
+    @media (max-width: 480px) {
+      max-height: 14px; /* 더 작은 화면에서는 더 줄임 */
+    }
+  }
+`;
+
+
 export const ImageElementWrapper = styled.div`
     width: 53.5%;
     min-width: 250px;
