@@ -1,73 +1,91 @@
-import { ALUMNI_NEWS_INFORMATION_TYPE } from "./../types/people/alumni-news-information";
+import { ALUMNI_NEWS_INFORMATION_TYPE } from './../types/people/alumni-news-information';
 
 export const GENERATIONS = {
-  ONE: 1,
-  TWO: 2,
-  THREE: 3,
-  FOUR: 4,
-  FIVE: 5,
-  SIX: 6,
-  SEVEN: 7,
-  EIGHT: 8,
-  NINE: 9,
-  TEN: 10,
+    ONE: 1,
+    TWO: 2,
+    THREE: 3,
+    FOUR: 4,
+    FIVE: 5,
+    SIX: 6,
+    SEVEN: 7,
+    EIGHT: 8,
+    NINE: 9,
+    TEN: 10,
+    ELEVEN: 11,
+    TWELVE: 12,
 };
 
-export enum OCCUPATIONS {
-  DEVELOPER = "개발자",
-  ENTREPRENEUR = "창업가",
-  PM = "PM",
-  CONSULTANT = "컨설턴트",
-}
+// 현재 미사용
+// export enum OCCUPATIONS {
+//     DEVELOPER = '개발자',
+//     ENTREPRENEUR = '창업가',
+//     PM = 'PM',
+//     CONSULTANT = '컨설턴트',
+// }
 
 export const ALUMNI_NEWS_INFORMATION: ALUMNI_NEWS_INFORMATION_TYPE[] = [
-  {
-    gen: GENERATIONS.TWO,
-    occupation: OCCUPATIONS.DEVELOPER,
-    thumbnailImgSrc: "/images/alumni/cardnews/People_Google.png",
-    comment: "경영학과 학부생이 구글 개발자가 되기까지",
-    url: "https://www.instagram.com/p/C24sCRSh3vD/?utm_source=ig_web_copy_link",
-    name: "강원준",
-  },
-  {
-    gen: GENERATIONS.SEVEN,
-    occupation: OCCUPATIONS.ENTREPRENEUR,
-    thumbnailImgSrc: "/images/alumni/cardnews/People_Mesher.png",
-    comment: "NEXT를 안했으면 내가 창업을 못하지 않았을까",
-    url: "https://www.instagram.com/p/C24r5MfhDs4/?utm_source=ig_web_copy_link",
-    name: "최주환/박지환",
-  },
-  {
-    gen: GENERATIONS.NINE,
-    occupation: OCCUPATIONS.PM,
-    thumbnailImgSrc: "/images/alumni/cardnews/People_NC.png",
-    comment: "제 커리어는 NEXT를 빼놓고는 설명할 수 없어요",
-    url: "https://www.instagram.com/p/C24riffhy1b/?utm_source=ig_web_copy_link",
-    name: "전해린",
-  },
-  {
-    gen: GENERATIONS.SIX,
-    occupation: OCCUPATIONS.DEVELOPER,
-    thumbnailImgSrc: "/images/alumni/cardnews/People_Naver.png",
-    comment: "좋은 사람들과 누구보다 치열하게 고민하고 개발하기",
-    url: "https://www.instagram.com/p/C24sCRSh3vD/?utm_source=ig_web_copy_link",
-    name: "이지현",
-  },
-  {
-    gen: GENERATIONS.SIX,
-    occupation: OCCUPATIONS.ENTREPRENEUR,
-    thumbnailImgSrc: "/images/alumni/cardnews/People_CM.png",
-    comment: "창업을 하면서 기댈 수 있는 동료들을 만난 곳",
-    url: "https://www.instagram.com/p/C24r5MfhDs4/?utm_source=ig_web_copy_link",
-    name: "유현재",
-  },
+    {
+        gen: GENERATIONS.SIX,
+        thumbnailImgSrc: '/assets/유현재.png',
+        comment: '미래를 함께 설계하는 최고의 인재풀',
+        url: 'https://www.instagram.com/p/DFmnzw6hHvC/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==',
+        name: '유현재',
+    },
+    {
+        gen: GENERATIONS.EIGHT,
+        thumbnailImgSrc: '/assets/류지현.png',
+        comment: 'NEXT는 새로운 도약을 위한 디딤돌',
+        url: 'https://www.instagram.com/p/DFmn1B7hOB_/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==',
+        name: '류지현',
+    },
+    {
+        gen: GENERATIONS.SEVEN,
+        thumbnailImgSrc: '/assets/최주원.png',
+        comment: '창업을 결심하게 된 든든한 발판',
+        url: 'https://www.instagram.com/p/DFmnxRwBdaH/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==',
+        name: '최주원',
+    },
+    {
+        gen: GENERATIONS.THREE,
+        thumbnailImgSrc: '/assets/이강희.png',
+        comment: '주제척인 삶의 방향성을 가르쳐준 곳',
+        url: 'https://www.instagram.com/p/DFmoZbdBFWO/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==',
+        name: '이강희',
+    },
+    {
+        gen: GENERATIONS.TWO,
+        thumbnailImgSrc: '/assets/최예빈.png',
+        comment: 'NEXT는 스스로의 가능성을 확장하는 곳',
+        url: 'https://www.instagram.com/p/DFmoRvvhX5_/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==',
+        name: '최예빈',
+    },
 
-  {
-    gen: GENERATIONS.SIX,
-    occupation: OCCUPATIONS.CONSULTANT,
-    thumbnailImgSrc: "/images/alumni/cardnews/People_Bain.png",
-    comment: "기획부터 구현까지 A to Z를 경험할 수 있는 곳",
-    url: "https://www.instagram.com/p/C24riffhy1b/?utm_source=ig_web_copy_link",
-    name: "방혜주",
-  },
+    {
+        gen: GENERATIONS.EIGHT,
+        thumbnailImgSrc: '/assets/김범진.png',
+        comment: '창업이라는 막연한 꿈이 개발이라는 실천의 기회로',
+        url: 'https://www.instagram.com/p/DFmoNsJBcwo/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==',
+        name: '김범진',
+    },
+    {
+        gen: GENERATIONS.ELEVEN,
+        thumbnailImgSrc: '/assets/최성호.png',
+        comment: '도전과 성장으로 빛난 창업여장의 출발점',
+        url: 'https://www.instagram.com/p/DFmoGOfhEPm/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==',
+        name: '최성호',
+    },
+    {
+        gen: GENERATIONS.TWELVE,
+        thumbnailImgSrc: '/assets/김정현.png',
+        comment: ' NEXT는 폭발적 성장을 위한 로켓',
+        url: 'https://www.instagram.com/p/DFmn2QqhfBp/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==',
+        name: '김정현',
+    },
+    {
+        gen: GENERATIONS.TWELVE,
+        thumbnailImgSrc: '/assets/임도현.png',
+        comment: '창업의 꿈을 현실로 만든 인연과 혁신의 장',
+        url: 'https://www.instagram.com/p/DFmlgZ9hPmB/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==',
+        name: '임도현',
+    },
 ];
