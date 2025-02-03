@@ -59,8 +59,8 @@ const Cardnews = () => {
                                         <Image
                                             src={item.thumbnailImgSrc}
                                             alt={`${index}-${item.name}`}
-                                            width={200}
-                                            height={170}
+                                            width={300}
+                                            height={200}
                                             style={{ objectFit: 'cover' }}
                                         />
                                     ) : (
