@@ -137,7 +137,7 @@ export default function Join() {
                             <S.ModalContentWrapper>
                                 {modalPage == 1 && (
                                     <S.InfoModal>
-                                        <h2>12기 지원 안내</h2>
+                                        <h2>13기 지원 안내</h2>
                                         <br />
                                         <p>
                                             <span>1. 지원방식</span>
