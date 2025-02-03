@@ -8,7 +8,7 @@ import Logo from 'public/assets/logo.png';
 import LikeLion from 'public/assets/likelion_kor_logo.svg';
 import MainBG from 'public/assets/Rocket_Background.png';
 import Section2Img from 'public/assets/main_section2.png';
-import Text from 'public/assets/Accelerate_Your_Potential_new.svg';
+import Text from 'public/assets/Accelerate_Your_Potential.png';
 import { RocketLottie, LaptopLottie, SessionLottie, ProjectLottie, DemodayLottie } from 'components/lottie/lottie';
 import { Partners } from 'constants/partners';
 import Sticky from 'components/sticky';
