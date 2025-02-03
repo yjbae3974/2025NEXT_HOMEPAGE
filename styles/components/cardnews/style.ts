@@ -132,32 +132,32 @@ export const ThumbnailImgDiv = styled.div`
         transition: all 0.3s ease-in-out;
     }
 
-    /* 별 반짝이는 효과 */
-    &:before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: url('https://www.transparenttextures.com/patterns/stardust.png'); /* 별 패턴 */
-        background-size: 500%;
-        opacity: 0.5;
-        animation: ${starsAnimation} 20s linear infinite;
-    }
+    // /* 별 반짝이는 효과 */
+    // &:before {
+    //     content: '';
+    //     position: absolute;
+    //     top: 0;
+    //     left: 0;
+    //     width: 100%;
+    //     height: 100%;
+    //     background: url('https://www.transparenttextures.com/patterns/stardust.png'); /* 별 패턴 */
+    //     background-size: 500%;
+    //     opacity: 0.5;
+    //     animation: ${starsAnimation} 20s linear infinite;
+    // }
 
-    /* 은하 느낌 추가 */
-    &:after {
-        content: '';
-        position: absolute;
-        width: 200px;
-        height: 200px;
-        background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, rgba(0, 0, 0, 0) 60%);
-        top: -50px;
-        left: -50px;
-        opacity: 0.6;
-        filter: blur(30px);
-    }
+    // /* 은하 느낌 추가 */
+    // &:after {
+    //     content: '';
+    //     position: absolute;
+    //     width: 200px;
+    //     height: 200px;
+    //     background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, rgba(0, 0, 0, 0) 60%);
+    //     top: -50px;
+    //     left: -50px;
+    //     opacity: 0.6;
+    //     filter: blur(30px);
+    // }
 `;
 
 export const CommentDiv = styled.div`
