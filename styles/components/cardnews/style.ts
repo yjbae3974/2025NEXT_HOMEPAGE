@@ -124,6 +124,13 @@ export const ThumbnailImgDiv = styled.div`
     overflow: hidden;
     margin: 2rem;
     border-radius: 12px; /* 둥근 모서리 추가 */
+    cursor: pointer;
+
+    &:hover {
+        transform: scale(1.02);
+        box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+        transition: all 0.3s ease-in-out;
+    }
 
     /* 별 반짝이는 효과 */
     &:before {
@@ -134,6 +141,7 @@ export const ThumbnailImgDiv = styled.div`
         width: 100%;
         height: 100%;
         background: url('https://www.transparenttextures.com/patterns/stardust.png'); /* 별 패턴 */
+        background-size: 500%;
         opacity: 0.5;
         animation: ${starsAnimation} 20s linear infinite;
     }

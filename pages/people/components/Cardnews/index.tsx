@@ -24,6 +24,10 @@ const Cardnews = () => {
     }, []);
 
     const openPopup = (URL: string) => {
+        if (!URL) {
+            alert('PEOPLE of NEXT 인터뷰 카드뉴스가 곧 공개될 예정입니다. 기대해주세요!');
+            return;
+        }
         if (isDesktop) {
             const popupWidth = 600;
             const popupHeight = 800;
