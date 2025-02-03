@@ -29,7 +29,6 @@ export default function Greeting() {
                 <S.TextElementWrapper data-aos="fade">
                     <div>
                         <p>
-<<<<<<< .merge_file_bpTUK9
                             안녕하세요. 고려대학교 유일의 소프트웨어 창업학회{" "}
                             <br />
                             <span
@@ -38,10 +37,6 @@ export default function Greeting() {
                                     alignItems: "center",
                                 }}
                             >
-=======
-                            안녕하세요. 고려대학교 유일의 소프트웨어 창업학회 <br />
-                            <span style={{ display: 'inline-flex', alignItems: 'center' }}>
->>>>>>> .merge_file_x16hJ0
                                 <img
                                     src={blackLogo.src}
                                     alt="NEXT"
@@ -57,18 +52,11 @@ export default function Greeting() {
                             반갑습니다.
                         </p>
                         <p>
-<<<<<<< .merge_file_bpTUK9
                             창업, 아이디어는 떠오르지만 막상 실행 방법을 몰라,
                             혹은 함께할 사람이 없어 묻어두지는 않으셨나요?
                             <br />
                             코딩, 따분한 강의와 두꺼운 교재에 결국 흐지부지
                             끝나버리지는 않으셨나요?
-=======
-                            창업, 아이디어는 떠오르지만 막상 실행 방법을 몰라, 혹은 함께할 사람이 없어 묻어두지는
-                            않으셨나요?
-                            <br />
-                            코딩, 따분한 강의와 두꺼운 교재에 결국 흐지부지 끝나버리지는 않으셨나요?
->>>>>>> .merge_file_x16hJ0
                         </p>
                         <br />
                         <p>
@@ -89,7 +77,6 @@ export default function Greeting() {
                                     }}
                                 />
                             </span>
-<<<<<<< .merge_file_bpTUK9
                             에서는 자체적으로 구축한 커리큘럼에 따라 개발을
                             학습하며 소프트웨어 역량을 기르고
                             <br />
@@ -100,31 +87,16 @@ export default function Greeting() {
                         <p>
                             공동의 목표를 가진 동료들, 서비스를 직접 만들고
                             시장에서 테스트하며 축적한 실전 역량,
-=======
-                            에서는 자체적으로 구축한 커리큘럼에 따라 개발을 학습하며 소프트웨어 역량을 기르고
-                            <br />
-                            다양한 파트너사와의 협업을 통해 기업가적 마인드셋을 갖출 수 있습니다.
-                        </p>
-                        <br />
-                        <p>
-                            공동의 목표를 가진 동료들, 서비스를 직접 만들고 시장에서 테스트하며 축적한 실전 역량,
->>>>>>> .merge_file_x16hJ0
                             <br />
                             다양한 분야의 사람들과 네트워킹할 수 있는 시간까지.
                         </p>
                         <br />
                         <p>
-<<<<<<< .merge_file_bpTUK9
                             이 과정에서 우리는 더 넓은 세상을 마주하게 될
                             것이고,
                             <br />
                             동료들과 열정을 공유하며 모두가 그리는 비전에 더욱
                             가까워질 것입니다.
-=======
-                            이 과정에서 우리는 더 넓은 세상을 마주하게 될 것이고,
-                            <br />
-                            동료들과 열정을 공유하며 모두가 그리는 비전에 더욱 가까워질 것입니다.
->>>>>>> .merge_file_x16hJ0
                         </p>
                         <br />
                         <p>
@@ -169,26 +141,12 @@ export default function Greeting() {
                         </b>
                         <span
                             style={{
-<<<<<<< .merge_file_bpTUK9
                                 display: "flex",
                                 alignItems: "baseline",
                                 justifyContent: "flex-end",
                                 fontWeight: "400",
                                 fontSize: "1em",
                                 flexWrap: "wrap",
-=======
-                                display: 'flex',
-                                alignItems: 'baseline',
-                                justifyContent: 'flex-end',
-                                fontWeight: '400',
-                                fontSize: '0.9em',
-                                ...(isMobile && {
-                                    display: 'block',
-                                    textAlign: 'right',
-                                    lineHeight: '1.8',
-                                    marginTop: '1rem',
-                                }),
->>>>>>> .merge_file_x16hJ0
                             }}
                         >
                             {" "}
