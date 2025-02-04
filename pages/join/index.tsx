@@ -188,7 +188,14 @@ export default function Join() {
                                             <span>6. 오리엔테이션 필참</span>
                                             <br />
                                             최종 합격 이후 <b>3월 1일(토)</b>에 진행되는 OT는 필수 참여입니다. 원활한
-                                            학회 운영을 위해, OT를 고려하여 개인 일정을 조정해주시면 감사하겠습니다
+                                            학회 운영을 위해, OT를 고려하여 개인 일정을 조정해주시면 감사하겠습니다.{' '}
+                                            <br />
+                                            <br />
+                                            <span>7. 문의 창구</span>
+                                            <br />
+                                            💬 카카오톡 채널 | 고려대학교 NEXT <br />
+                                            💬 인스타그램 DM | @next_koreauniv <br />
+                                            💬 13기 대표 김정현 | 010-4665-7870 <br />
                                         </p>
                                         <S.CheckContainer>
                                             <input
