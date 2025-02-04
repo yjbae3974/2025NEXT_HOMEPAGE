@@ -193,7 +193,16 @@ export default function Join() {
                                             <br />
                                             <span>7. 문의 창구</span>
                                             <br />
-                                            💬 카카오톡 채널 | 고려대학교 NEXT <br />
+                                            💬 카카오톡 채널 |{' '}
+                                            <a
+                                                href="https://pf.kakao.com/_xacxgxbn"
+                                                style={{
+                                                    cursor: 'pointer',
+                                                }}
+                                            >
+                                                고려대학교 NEXT
+                                            </a>{' '}
+                                            <br />
                                             💬 인스타그램 DM | @next_koreauniv <br />
                                             💬 13기 대표 김정현 | 010-4665-7870 <br />
                                         </p>
