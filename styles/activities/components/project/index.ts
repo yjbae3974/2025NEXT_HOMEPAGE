@@ -33,12 +33,12 @@ export const MainContainer = styled.div<{ isMobile: boolean }>`
 
 export const SessionWrapper = styled.div<{ isMobile: boolean }>`
   width: 33%;
-  height: 100%;
   padding-top: 3%;
   padding-bottom: 8%;
-  display: grid;
-  grid-template-rows: auto 1fr;
-  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; // 내부 요소 균형 맞춤
+  align-items: stretch; // 높이 균일하게 맞춤
 
   @media screen and (max-width: 500px) {
     flex-direction: column;
@@ -141,6 +141,9 @@ export const SessionInfoBox = styled.p<{ isMobile: boolean }>`
   line-height: 2.5rem;
   font-weight: 600;
   margin-bottom: 5rem;
+  @media screen and (min-width: 820px){
+      height: 120px;
+  }
 `;
 
 export const ProjectExampleWrapper = styled.div`
