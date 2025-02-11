@@ -61,8 +61,20 @@ export default function App({ Component, pageProps }: AppProps<{ session: Sessio
                         </Head>
                         <Header></Header>
                         {/* GA 설정 시작 */}
-                        {/* Global Site Tag (gtag.js) - Google Analytics */}
                         <Script
+                            strategy="afterInteractive"
+                            src="https://www.googletagmanager.com/gtag/js?id=G-EH9Q3YYL1L"
+                        />
+                        <Script id="google-analytics" strategy="afterInteractive">
+                            {`
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments);}
+                    gtag('js', new Date());
+                    gtag('config', 'G-EH9Q3YYL1L');
+                `}
+                        </Script>
+                        {/* Global Site Tag (gtag.js) - Google Analytics */}
+                        {/* <Script
                             strategy="afterInteractive"
                             src={`https://www.googletagmanager.com/gtag/js?id=${gtag.GA_TRACKING_ID}`}
                         />
@@ -77,7 +89,7 @@ export default function App({ Component, pageProps }: AppProps<{ session: Sessio
         gtag('config', '${gtag.GA_TRACKING_ID}', {
           page_path: window.location.pathname,
         });
-      `,
+      `, */}
                             }}
                         />
                         {/* GA 설정 끝 */}
