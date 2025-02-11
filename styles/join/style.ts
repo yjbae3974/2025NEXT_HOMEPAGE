@@ -258,7 +258,7 @@ export const TitleWrapper = styled.div<{ isMobile: boolean }>`
     }
 `;
 export const RocketInfo = styled.div`
-    width: 35%;
+    width: 50%;
     margin-top: 0;
     position: relative;
     top: -1rem;
@@ -283,6 +283,7 @@ export const RocketInfo = styled.div`
         font-weight: 700;
     }
 `;
+
 export const InfoModal = styled.div`
     display: flex;
     flex-direction: column;
