@@ -43,14 +43,14 @@ export default function Main() {
                     <S.MainContainer>
                         <S.MainWrapper isMobile={isMobile}>
                             <S.MainTextWrapper>
-                                <Image src={Text} alt="Main Text" layout="intrinsic" priority />
+                                <Image src={Text} alt="Main Text" layout="intrinsic" />
                             </S.MainTextWrapper>
                             <S.MainContainerLogo>
-                                <Image src={Logo} alt="Logo" layout="intrinsic" priority />
+                                <Image src={Logo} alt="Logo" layout="intrinsic" />
                             </S.MainContainerLogo>
                             <S.MainTextLionWrapper>
                                 <h2>고려대학교</h2>
-                                <Image src={LikeLion} alt="Like Lion" layout="intrinsic" priority />
+                                <Image src={LikeLion} alt="Like Lion" layout="intrinsic" />
                             </S.MainTextLionWrapper>
                         </S.MainWrapper>
                         {/* 배경 이미지 최적화 */}
