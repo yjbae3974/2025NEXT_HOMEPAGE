@@ -112,7 +112,7 @@ const NavBar = () => {
                                                                         animate={{ opacity: 1 }}
                                                                         exit={{ opacity: 0 }}
                                                                     >
-                                                                        <S.SubMenu
+                                                                        {/* <S.SubMenu
                                                                             onClick={() => {
                                                                                 router.push({
                                                                                     pathname: path,
@@ -122,12 +122,12 @@ const NavBar = () => {
                                                                             }}
                                                                         >
                                                                             Introductions
-                                                                        </S.SubMenu>
+                                                                        </S.SubMenu> */}
                                                                         <S.SubMenu
                                                                             onClick={() => {
                                                                                 router.push({
                                                                                     pathname: path,
-                                                                                    query: { key: '2' },
+                                                                                    query: { key: '1' },
                                                                                 });
                                                                                 setIsOpen((prev) => !prev);
                                                                             }}
@@ -138,7 +138,7 @@ const NavBar = () => {
                                                                             onClick={() => {
                                                                                 router.push({
                                                                                     pathname: path,
-                                                                                    query: { key: '3' },
+                                                                                    query: { key: '2' },
                                                                                 });
                                                                                 setIsOpen((prev) => !prev);
                                                                             }}
@@ -149,7 +149,7 @@ const NavBar = () => {
                                                                             onClick={() => {
                                                                                 router.push({
                                                                                     pathname: path,
-                                                                                    query: { key: '4' },
+                                                                                    query: { key: '3' },
                                                                                 });
                                                                                 setIsOpen((prev) => !prev);
                                                                             }}
@@ -160,7 +160,7 @@ const NavBar = () => {
                                                                             onClick={() => {
                                                                                 router.push({
                                                                                     pathname: path,
-                                                                                    query: { key: '5' },
+                                                                                    query: { key: '4' },
                                                                                 });
                                                                                 setIsOpen((prev) => !prev);
                                                                             }}
