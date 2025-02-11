@@ -5,7 +5,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import GroupPhoto from "public/images/profile/2024crew.jpg";
 import blackLogo from "public/assets/new_logo(bl).svg";
-
+import Image from "next/image";
 export const DESKTOP_TAB = {
     width: "100%",
     margin: "0 auto 2rem auto",
@@ -31,23 +31,13 @@ export default function Greeting() {
                         <p>
                             안녕하세요. 고려대학교 유일의 소프트웨어 창업학회{" "}
                             <br />
-                            <span
-                                style={{
-                                    display: "inline-flex",
-                                    alignItems: "center",
-                                }}
+                            <S.ImageSpanWrapper
                             >
-                                <img
-                                    src={blackLogo.src}
+                                <Image
+                                    src={blackLogo}
                                     alt="NEXT"
-                                    style={{
-                                        height: "1em",
-                                        verticalAlign: "middle",
-                                        margin: "0 3px",
-                                        display: "inline-block",
-                                    }}
                                 />
-                            </span>
+                            </S.ImageSpanWrapper>
                             (고려대학교 멋쟁이사자처럼)에 오신 여러분
                             반갑습니다.
                         </p>
@@ -60,23 +50,15 @@ export default function Greeting() {
                         </p>
                         <br />
                         <p>
-                            <span
-                                style={{
-                                    display: "inline-flex",
-                                    alignItems: "center",
-                                }}
+                            <S.ImageSpanWrapper
+                                
                             >
-                                <img
-                                    src={blackLogo.src}
+                                <Image
+                                    src={blackLogo}
                                     alt="NEXT"
-                                    style={{
-                                        height: "1em",
-                                        verticalAlign: "middle",
-                                        margin: "0 3px",
-                                        display: "inline-block",
-                                    }}
+                                   
                                 />
-                            </span>
+                            </S.ImageSpanWrapper>
                             에서는 자체적으로 구축한 커리큘럼에 따라 개발을
                             학습하며 소프트웨어 역량을 기르고
                             <br />
@@ -101,23 +83,15 @@ export default function Greeting() {
                         <br />
                         <p>
                             지금껏 경험해본 적 없는 폭발적인 성장을 기대하며{" "}
-                            <span
-                                style={{
-                                    display: "inline-flex",
-                                    alignItems: "center",
-                                }}
+                            <S.ImageSpanWrapper
+                                
                             >
-                                <img
-                                    src={blackLogo.src}
+                                <Image
+                                    src={blackLogo}
                                     alt="NEXT"
-                                    style={{
-                                        height: "1em",
-                                        verticalAlign: "middle",
-                                        margin: "0 3px",
-                                        display: "inline-block",
-                                    }}
+                                    
                                 />
-                            </span>
+                            </S.ImageSpanWrapper>
                             라는{" "}
                             <span
                                 style={{ color: "orange", fontWeight: "bold" }}

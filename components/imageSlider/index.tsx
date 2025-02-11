@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import LeftArrow from "public/images/activities/demoday/arrows/leftArrow.png";
 import RightArrow from "public/images/activities/demoday/arrows/rightArrow.png";
-
+import Image from "next/image";
 import Tryanglez from "public/images/activities/demoday/demoteams/tryanglez.png";
 import Petmorning from "public/images/activities/demoday/demoteams/petmorning.png";
 import Starchive from "public/images/activities/demoday/demoteams/starchive.png";
@@ -63,9 +63,10 @@ const ImageSlider: React.FC = () => {
         marginTop: "3rem",
       }}
     >
-      <img
+      <Image
         onClick={onPrev}
-        src={LeftArrow.src}
+        src={LeftArrow}
+        alt="leftArrow"
         style={{
           width: "1.5rem",
           margin: "0 2rem 0 0",
@@ -81,9 +82,9 @@ const ImageSlider: React.FC = () => {
         }}
       >
         {images.map((image, index) => (
-          <img
+          <Image
             key={index}
-            src={image.src.src}
+            src={image.src}
             alt={image.name}
             style={{
               transition: "transform 0.5s ease-in-out",
@@ -102,9 +103,10 @@ const ImageSlider: React.FC = () => {
           />
         ))}
       </div>
-      <img
+      <Image
         onClick={onNext}
-        src={RightArrow.src}
+        src={RightArrow}
+        alt="rightArrow"
         style={{
           width: "1.5rem",
           margin: "0 0 0 2rem",

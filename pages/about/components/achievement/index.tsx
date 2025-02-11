@@ -5,7 +5,7 @@ import { Startups as StartupsItems } from 'constants/startups';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import blackLogo from 'public/assets/new_logo(bl).svg';
-
+import Image from "next/image";
 export const DESKTOP_TAB = {
     width: '100%',
     margin: '0 auto 2rem auto',
@@ -29,8 +29,8 @@ export default function Achievement() {
                     <p>
                         <span>
                             고려대학교 소프트웨어 창업학회
-                            <img
-                                src={blackLogo.src}
+                            <Image
+                                src={blackLogo}
                                 alt="NEXT"
                                 style={{
                                     height: '1em',
@@ -54,7 +54,7 @@ export default function Achievement() {
                 <S.ImageWrapper isMobile={isMobile} className="mount">
                     {StartupsItems.map(({ name, src }) => (
                         <S.ImageElementWrapper key={name} data-aos="fade" isMobile={isMobile}>
-                            <img src={src.src} />
+                            <Image src={src} alt={name} />
                         </S.ImageElementWrapper>
                     ))}
                 </S.ImageWrapper>

@@ -196,7 +196,7 @@ export const CloseBtnWrapper = styled.div`
     }
 `;
 export const TitleWrapper = styled.div<{ isMobile: boolean }>`
-    width: 80%;
+    width: 70%;
     max-width: 800px;
     position: absolute;
     z-index: 4;
@@ -214,12 +214,12 @@ export const TitleWrapper = styled.div<{ isMobile: boolean }>`
     animation: ${fadeIn} 2s 4s forwards;
 
     & > img {
-        width: 100%;
+        width: 90%;
         margin-bottom: 2.5rem;
         ${(props) =>
             !props.isMobile &&
             css`
-                width: 60%;
+                width: 50%;
             `}
     }
 
@@ -227,7 +227,7 @@ export const TitleWrapper = styled.div<{ isMobile: boolean }>`
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 100%;
+        width: 75%;
         margin-bottom: 2.5rem;
         gap: 2rem;
 
@@ -257,8 +257,10 @@ export const TitleWrapper = styled.div<{ isMobile: boolean }>`
         top: 0;
     }
 `;
-export const RocketInfo = styled.div`
-    width: 35%;
+
+export const RocketInfo = styled.div<{ isMobile: boolean }>`
+    width: 55%;
+    white-space: nowrap;
     margin-top: 0;
     position: relative;
     top: -1rem;
@@ -269,6 +271,12 @@ export const RocketInfo = styled.div`
     border-radius: 8px;
     padding: 0.8rem;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+
+    ${(props) =>
+        !props.isMobile &&
+        css`
+            width: 35%;
+        `}
 
     & p {
         font-size: 1.8rem;
@@ -283,6 +291,7 @@ export const RocketInfo = styled.div`
         font-weight: 700;
     }
 `;
+
 export const InfoModal = styled.div`
     display: flex;
     flex-direction: column;

@@ -9,6 +9,7 @@ import { Fade } from "react-awesome-reveal";
 import Slick from "components/slick/index";
 import Logo from "public/assets/logo.png";
 import { useRouter } from "next/router";
+import Image from "next/image";
 export default function Sticky() {
   const isDesktop = useMediaQuery({ minDeviceWidth: 820 });
   const isMobile = useMediaQuery({ maxWidth: 820 });
@@ -66,7 +67,7 @@ export default function Sticky() {
         </div>
       </S.StickyContent>
       <S.Sticky isMobile={isMobile}>
-        <img src={Demoday.src} />
+        <Image src={Demoday} alt="Demoday" />
       </S.Sticky>
     </S.StickyContainer>
   );

@@ -38,7 +38,7 @@ export default function People() {
                         centered
                         items={[
                             {
-                                label: 'Alumni',
+                                label: 'PEOPLE of NEXT',
                                 key: '1',
                                 children: <Cardnews />,
                             },
@@ -62,7 +62,7 @@ export default function People() {
                                 children: (
                                     <Member peopleInformation={PEOPLE_INFORMATION.filter((item) => item.gen === 12)} />
                                 ),
-                            }
+                            },
                         ]}
                     />
                 </S.Container>
