@@ -90,8 +90,8 @@ export default function App({ Component, pageProps }: AppProps<{ session: Sessio
           page_path: window.location.pathname,
         });
       `, */}
-                            }}
-                        />
+                        {/* }}
+                        /> */}
                         {/* GA 설정 끝 */}
                         {loading ? <Loading /> : <Component {...pageProps} />}
                         {/* <Loading /> */}
