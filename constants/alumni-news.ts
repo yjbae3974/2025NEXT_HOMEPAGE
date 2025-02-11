@@ -69,7 +69,7 @@ export const ALUMNI_NEWS_INFORMATION: ALUMNI_NEWS_INFORMATION_TYPE[] = [
     {
         gen: GENERATIONS.ELEVEN,
         thumbnailImgSrc: '/images/alumni/cardnews/최성호.png',
-        comment: '도전과 성장으로 빛난 창업여장의 출발점',
+        comment: '도전과 성장으로 빛난 창업 여정의 출발점',
         url: 'https://www.instagram.com/p/DFmoGOfhEPm/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==',
         name: '최성호',
     },
