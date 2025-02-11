@@ -9,7 +9,7 @@ export const DESKTOP_TAB = {
     width: '100%',
     margin: '0 auto 2rem auto',
 };
-
+import Image from "next/image";
 export default function Partners() {
     const [loading, setLoading] = useState(true);
     const isDesktop = useMediaQuery({ minDeviceWidth: 820 });
@@ -29,8 +29,8 @@ export default function Partners() {
                     <p>
                         <span>
                             고려대학교 소프트웨어 창업학회 
-                            <img
-                                src={blackLogo.src}
+                            <Image
+                                src={blackLogo}
                                 alt="NEXT"
                                 style={{
                                     height: '1em',
@@ -50,7 +50,7 @@ export default function Partners() {
                 <S.ImageWrapper isMobile={isMobile} className="mount">
                     {PartnersItems.map(({ name, src }) => (
                         <S.ImageElementWrapper key={name} data-aos="fade" isMobile={isMobile}>
-                            <img src={src.src} />
+                            <Image src={src} alt={name} />
                         </S.ImageElementWrapper>
                     ))}
                 </S.ImageWrapper>

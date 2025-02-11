@@ -9,7 +9,7 @@ import { ProjectItem } from 'constants/project';
 import hackathon_codeit from 'public/images/activities/project/hackathon_codeit.jpg';
 import ideathon from 'public/images/activities/project/ideathon.png';
 import product_day from 'public/images/activities/project/product_day.jpg';
-
+import Image from "next/image";
 export default function Curriculrum() {
     const [loading, setLoading] = useState(true);
     const isDesktop = useMediaQuery({ minDeviceWidth: 820 });
@@ -39,7 +39,7 @@ export default function Curriculrum() {
                                 간단한 아이디어부터 구체적인 계획까지 도출하는 경험을 쌓습니다.
                             </S.SessionInfoBox>
                             <S.SessionImgBox isMobile={isMobile}>
-                                <img src={ideathon.src} alt="아이디어어톤" />
+                                <Image src={ideathon} alt="아이디어어톤" />
                             </S.SessionImgBox>
                         </S.SessionWrapper>
                         <S.SessionWrapper isMobile={isMobile}>
@@ -55,7 +55,7 @@ export default function Curriculrum() {
                                 창업가로서의 협업 경험을 쌓습니다.
                             </S.SessionInfoBox>
                             <S.SessionImgBox isMobile={isMobile}>
-                                <img src={hackathon_codeit.src} alt="무박해커톤" />
+                                <Image src={hackathon_codeit} alt="무박해커톤" />
                             </S.SessionImgBox>
                         </S.SessionWrapper>
                         <S.SessionWrapper isMobile={isMobile}>
@@ -71,7 +71,7 @@ export default function Curriculrum() {
                                 <br />
                             </S.SessionInfoBox>
                             <S.SessionImgBox isMobile={isMobile}>
-                                <img src={product_day.src} alt="프로덕트 데이" />
+                                <Image src={product_day} alt="프로덕트 데이" />
                             </S.SessionImgBox>
                         </S.SessionWrapper>
                         {/* <S.ProjectExampleWrapper>

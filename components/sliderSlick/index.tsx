@@ -4,7 +4,7 @@ import Slider from "react-slick";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { SLIDE_ITEM } from "types/people/slide-item";
-
+import Image from "next/image";
 interface Props {
   slideItemGroup: SLIDE_ITEM[];
   slideSpeed?: number;
@@ -63,7 +63,7 @@ const Slick: React.FC<Props> = ({
         {slideItemGroup.map(({ name, src }) => (
           <S.ElementWrapper key={name} data-aos="fade">
             <S.ImageWrapper>
-              <img src={src.src} />
+              <Image src={src} alt={name} />
             </S.ImageWrapper>
           </S.ElementWrapper>
         ))}

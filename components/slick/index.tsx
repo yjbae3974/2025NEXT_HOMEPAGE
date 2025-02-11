@@ -4,6 +4,7 @@ import Slider from "react-slick";
 import { Alumni } from "constants/alumni";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Image from "next/image";
 function Slick() {
   useEffect(() => {
     AOS.init();
@@ -51,7 +52,7 @@ function Slick() {
         {AlumniList.map(({ name, src }) => (
           <S.ElementWrapper key={name} data-aos="fade">
             <S.ImageWrapper>
-              <img src={src.src} />
+              <Image src={src} alt={name} />
             </S.ImageWrapper>
           </S.ElementWrapper>
         ))}

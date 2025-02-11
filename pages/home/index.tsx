@@ -43,14 +43,14 @@ export default function Main() {
                     <S.MainContainer>
                         <S.MainWrapper isMobile={isMobile}>
                             <S.MainTextWrapper>
-                                <img src={Text.src} />
+                                <Image src={Text} alt="Accelerate Your Potential" />
                             </S.MainTextWrapper>
                             <S.MainContainerLogo>
-                                <img src={Logo.src} />
+                                <Image src={Logo} alt="NEXT" />
                             </S.MainContainerLogo>
                             <S.MainTextLionWrapper>
                                 <h2>고려대학교</h2>
-                                <img src={LikeLion.src} />
+                                <Image src={LikeLion} alt="LikeLion" />
                             </S.MainTextLionWrapper>
                         </S.MainWrapper>
                         <S.MainContainerBG src={MainBG.src} isMobile={isMobile} />
@@ -72,7 +72,7 @@ export default function Main() {
                         </div>
                         <div>
                             <S.HomeTwoTextWrapper data-aos="fade">
-                                <img src={Text.src} />
+                                <Image src={Text} alt="Accelerate Your Potential" />
                             </S.HomeTwoTextWrapper>
                             <p
                                 style={{
@@ -170,7 +170,7 @@ export default function Main() {
                         <S.PartnerContainer isMobile={isMobile}>
                             {partners.map(({ name, src }) => (
                                 <div key={name} data-aos="fade">
-                                    <img src={src.src} />
+                                    <Image src={src} alt={name} />
                                 </div>
                             ))}
                         </S.PartnerContainer>

@@ -5,7 +5,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import GroupPhoto from "public/images/profile/2024crew.jpg";
 import blackLogo from "public/assets/new_logo(bl).svg";
-
+import Image from "next/image";
 export const DESKTOP_TAB = {
     width: "100%",
     margin: "0 auto 2rem auto",
@@ -33,8 +33,8 @@ export default function Greeting() {
                             <br />
                             <S.ImageSpanWrapper
                             >
-                                <img
-                                    src={blackLogo.src}
+                                <Image
+                                    src={blackLogo}
                                     alt="NEXT"
                                 />
                             </S.ImageSpanWrapper>
@@ -53,8 +53,8 @@ export default function Greeting() {
                             <S.ImageSpanWrapper
                                 
                             >
-                                <img
-                                    src={blackLogo.src}
+                                <Image
+                                    src={blackLogo}
                                     alt="NEXT"
                                    
                                 />
@@ -86,8 +86,8 @@ export default function Greeting() {
                             <S.ImageSpanWrapper
                                 
                             >
-                                <img
-                                    src={blackLogo.src}
+                                <Image
+                                    src={blackLogo}
                                     alt="NEXT"
                                     
                                 />

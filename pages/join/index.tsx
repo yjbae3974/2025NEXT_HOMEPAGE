@@ -97,11 +97,11 @@ export default function Join() {
                 <S.Container>
                     {!launch && (
                         <S.TitleWrapper isMobile={isMobile}>
-                            <img src={Text.src} style={{ width: '40%' }} />
-                            <img src={Logo.src} />
+                            <Image src={Text} alt="Accelerate Your Potential" style={{ width: '40%' }} />
+                            <Image src={Logo} alt="NEXT" />
                             <div className="university-wrapper">
                                 <span>고려대학교</span>
-                                <img src={LogoLikeLion.src} />
+                                <Image src={LogoLikeLion} alt="LikeLion" />
                             </div>
                             <p>13기 모집</p>
                             <S.RocketInfo className="rocket-info" isMobile={isMobile}>
@@ -264,7 +264,7 @@ export default function Join() {
                             launched={launch}
                         >
                             <S.Rocket>
-                                <img src={RocketImg.src} />
+                                <Image src={RocketImg} alt="Rocket" />
                             </S.Rocket>
                             {/* <S.Fire launched={launch}>
                                 <FireLottie />
@@ -272,7 +272,7 @@ export default function Join() {
                         </S.RocketContainer>
 
                         <S.Planet launched={launch}>
-                            <img draggable={false} src={PlanetImg.src} />
+                            <Image draggable={false} src={PlanetImg} alt="Planet" />
                         </S.Planet>
                     </S.SpaceContainer>
 
