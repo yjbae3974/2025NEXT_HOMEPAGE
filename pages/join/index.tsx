@@ -15,7 +15,7 @@ import { motion } from 'framer-motion';
 import S3upload from 'components/s3upload/index';
 import { useRecoilState } from 'recoil';
 import { joinModalOpen, isLaunched } from 'constants/atoms';
-import Text from 'public/assets/Accelerate_Your_Potential.svg';
+import Text from 'public/assets/Accelerate_Your_Potential_new.svg';
 import Logo from 'public/assets/new_logo(wh).svg';
 import LogoLikeLion from 'public/assets/likelion_kor_logo.svg';
 const variants = {

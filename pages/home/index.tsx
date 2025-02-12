@@ -3,21 +3,28 @@ import React, { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import * as S from 'styles/home/style';
 import { useMediaQuery } from 'react-responsive';
-import Intro from 'components/intro';
 import Logo from 'public/assets/logo.png';
 import LikeLion from 'public/assets/likelion_kor_logo.svg';
 import MainBG from 'public/assets/Rocket_Background.png';
-import Section2Img from 'public/assets/main_section2.png';
 import Text from 'public/assets/Accelerate_Your_Potential_new.svg';
-import { RocketLottie, LaptopLottie, SessionLottie, ProjectLottie, DemodayLottie } from 'components/lottie/lottie';
+import dynamic from 'next/dynamic';
+
+const RocketLottie = dynamic(() => import('components/lottie/lottie').then((mod) => mod.RocketLottie), { ssr: false });
+const LaptopLottie = dynamic(() => import('components/lottie/lottie').then((mod) => mod.LaptopLottie), { ssr: false });
+const SessionLottie = dynamic(() => import('components/lottie/lottie').then((mod) => mod.SessionLottie), {
+    ssr: false,
+});
+const ProjectLottie = dynamic(() => import('components/lottie/lottie').then((mod) => mod.ProjectLottie), {
+    ssr: false,
+});
+const DemodayLottie = dynamic(() => import('components/lottie/lottie').then((mod) => mod.DemodayLottie), {
+    ssr: false,
+});
+
 import { Partners } from 'constants/partners';
 import Sticky from 'components/sticky';
-import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useRouter } from 'next/router';
-import { ImageElementWrapper } from 'styles/about/components/partners/styles';
-import next11thImg from 'public/images/next11/next11.png';
-import laptopImg from 'public/assets/home-bg-2 2.png';
 export default function Main() {
     const router = useRouter();
     const [loading, setLoading] = useState(true);
@@ -25,7 +32,9 @@ export default function Main() {
     const isMobile = useMediaQuery({ maxWidth: 820 });
     const partners = Partners;
     useEffect(() => {
-        AOS.init();
+        import('aos').then((AOS) => {
+            AOS.init();
+        });
         if (isMobile != undefined && isDesktop != undefined) {
             setLoading(false);
         }
@@ -62,17 +71,6 @@ export default function Main() {
                             priority
                         />
                     </S.MainContainer>
-                    {/* <S.MainContainer>
-            <S.MainWrapper isMobile={isMobile}>
-              <S.MainContainerLogo>
-                <img src={Logo.src} />
-              </S.MainContainerLogo>
-              <S.MainTextWrapper>
-                <img src={Text.src} />
-              </S.MainTextWrapper>
-            </S.MainWrapper>
-            <S.MainContainerBG src={MainBG.src} />
-          </S.MainContainer> */}
                     <S.Section1 isMobile={isMobile}>
                         <div data-aos="fade-right">
                             <LaptopLottie />
@@ -141,11 +139,7 @@ export default function Main() {
                                 marginTop: '6rem',
                             }}
                         >
-                            <S.MoreBtn
-                                isMobile={isMobile}
-                                onClick={() => router.push('activities')}
-                                // data-aos="fade"
-                            >
+                            <S.MoreBtn isMobile={isMobile} onClick={() => router.push('activities')}>
                                 &gt;&gt;&nbsp; Activities 자세히 보기
                             </S.MoreBtn>
                         </div>
