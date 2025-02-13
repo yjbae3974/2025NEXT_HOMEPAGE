@@ -1,30 +1,30 @@
-import Head from 'next/head';
-import React, { useState, useEffect } from 'react';
-import Image from 'next/image';
-import * as S from 'styles/home/style';
-import { useMediaQuery } from 'react-responsive';
-import Logo from 'public/assets/logo.png';
-import LikeLion from 'public/assets/likelion_kor_logo.svg';
-import MainBG from 'public/assets/Rocket_Background.png';
-import Text from 'public/assets/Accelerate_Your_Potential_new.svg';
-import dynamic from 'next/dynamic';
+import Head from "next/head";
+import React, { useState, useEffect } from "react";
+import Image from "next/image";
+import * as S from "styles/home/style";
+import { useMediaQuery } from "react-responsive";
+import Logo from "public/assets/logo.png";
+import LikeLion from "public/assets/likelion_kor_logo.svg";
+import MainBG from "public/assets/Rocket_Background.png";
+import Text from "public/assets/Accelerate_Your_Potential_new.svg";
+import dynamic from "next/dynamic";
 
-const RocketLottie = dynamic(() => import('components/lottie/lottie').then((mod) => mod.RocketLottie), { ssr: false });
-const LaptopLottie = dynamic(() => import('components/lottie/lottie').then((mod) => mod.LaptopLottie), { ssr: false });
-const SessionLottie = dynamic(() => import('components/lottie/lottie').then((mod) => mod.SessionLottie), {
+const RocketLottie = dynamic(() => import("components/lottie/lottie").then((mod) => mod.RocketLottie), { ssr: false });
+const LaptopLottie = dynamic(() => import("components/lottie/lottie").then((mod) => mod.LaptopLottie), { ssr: false });
+const SessionLottie = dynamic(() => import("components/lottie/lottie").then((mod) => mod.SessionLottie), {
     ssr: false,
 });
-const ProjectLottie = dynamic(() => import('components/lottie/lottie').then((mod) => mod.ProjectLottie), {
+const ProjectLottie = dynamic(() => import("components/lottie/lottie").then((mod) => mod.ProjectLottie), {
     ssr: false,
 });
-const DemodayLottie = dynamic(() => import('components/lottie/lottie').then((mod) => mod.DemodayLottie), {
+const DemodayLottie = dynamic(() => import("components/lottie/lottie").then((mod) => mod.DemodayLottie), {
     ssr: false,
 });
 
-import { Partners } from 'constants/partners';
-import Sticky from 'components/sticky';
-import 'aos/dist/aos.css';
-import { useRouter } from 'next/router';
+import { Partners } from "constants/partners";
+import Sticky from "components/sticky";
+import "aos/dist/aos.css";
+import { useRouter } from "next/router";
 export default function Main() {
     const router = useRouter();
     const [loading, setLoading] = useState(true);
@@ -32,7 +32,7 @@ export default function Main() {
     const isMobile = useMediaQuery({ maxWidth: 820 });
     const partners = Partners;
     useEffect(() => {
-        import('aos').then((AOS) => {
+        import("aos").then((AOS) => {
             AOS.init();
         });
         if (isMobile != undefined && isDesktop != undefined) {
@@ -42,6 +42,7 @@ export default function Main() {
     return (
         <div>
             <Head>
+                <title>NEXT - 고려대 멋사 | 고려대학교 소프트웨어 창업학회: HOME</title>
                 <meta name="google-site-verification" content="YdrWjel7OcCUGNmuvaV86uwaB_ZEqJsOqOoV-rKi6vA" />
             </Head>
             {/* <Intro></Intro> */}
@@ -65,7 +66,7 @@ export default function Main() {
                             src={MainBG}
                             alt="Background"
                             layout="fill"
-                            objectFit={isMobile ? 'contain' : 'cover'}
+                            objectFit={isMobile ? "contain" : "cover"}
                             priority
                         />
                     </S.MainContainer>
@@ -79,16 +80,16 @@ export default function Main() {
                             </S.HomeTwoTextWrapper>
                             <p
                                 style={{
-                                    marginTop: '10rem',
-                                    fontWeight: '700',
-                                    fontSize: '3rem',
+                                    marginTop: "10rem",
+                                    fontWeight: "700",
+                                    fontSize: "3rem",
                                 }}
                                 data-aos="fade"
                             >
                                 고려대학교 소프트웨어 창업학회
                                 <S.NextInlineLogo src={Logo.src} alt="" />는
                             </p>
-                            <p style={{ marginTop: '10rem' }} data-aos="fade">
+                            <p style={{ marginTop: "10rem" }} data-aos="fade">
                                 다양한 전공과 경험을 가진 사람들이 모여
                                 <br />
                                 함께 <b>소프트웨어/ IT 창업</b>을 통해
@@ -127,31 +128,31 @@ export default function Main() {
                             <RocketLottie />
 
                             <p>창업 경진대회 및 VC 투자 유치</p>
-                            <h2 style={{ fontSize: '3rem' }}>"창업"</h2>
+                            <h2 style={{ fontSize: "3rem" }}>"창업"</h2>
                         </S.LottieWrapper>
                         <div
                             style={{
-                                width: '100%',
-                                display: 'flex',
-                                justifyContent: 'flex-end',
-                                marginTop: '6rem',
+                                width: "100%",
+                                display: "flex",
+                                justifyContent: "flex-end",
+                                marginTop: "6rem",
                             }}
                         >
-                            <S.MoreBtn isMobile={isMobile} onClick={() => router.push('activities')}>
+                            <S.MoreBtn isMobile={isMobile} onClick={() => router.push("activities")}>
                                 &gt;&gt;&nbsp; Activities 자세히 보기
                             </S.MoreBtn>
                         </div>
                     </S.Section2>
-                    <S.Section2 style={{ background: 'black' }}>
+                    <S.Section2 style={{ background: "black" }}>
                         <S.TextWrapper isMobile={isMobile} data-aos="fade">
                             <span>
                                 <b>Partners</b>
                             </span>
                             <p
                                 style={{
-                                    marginTop: '4rem',
-                                    marginBottom: '4rem',
-                                    fontWeight: '700',
+                                    marginTop: "4rem",
+                                    marginBottom: "4rem",
+                                    fontWeight: "700",
                                 }}
                             >
                                 <span>

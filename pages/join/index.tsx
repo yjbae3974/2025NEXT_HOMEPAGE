@@ -1,23 +1,23 @@
-import Head from 'next/head';
-import React, { useState, useEffect, useRef } from 'react';
-import Image from 'next/image';
-import { useMediaQuery } from 'react-responsive';
-import * as S from 'styles/join/style';
-import spaceImg from 'public/assets/space_pressed.jpg';
+import Head from "next/head";
+import React, { useState, useEffect, useRef } from "react";
+import Image from "next/image";
+import { useMediaQuery } from "react-responsive";
+import * as S from "styles/join/style";
+import spaceImg from "public/assets/space_pressed.jpg";
 // import spaceImg from "public/assets/space.jpg";
 // import spaceImg2 from "public/assets/space2.jpg";
 // import spaceImg3 from "public/assets/space3.jpg";
-import ReactPannellum, { getConfig } from 'react-pannellum';
-import { FireLottie } from 'components/lottie/lottie';
-import RocketImg from 'public/assets/joinus_rocket.png';
-import PlanetImg from 'public/assets/new_earth@4x.png';
-import { motion } from 'framer-motion';
-import S3upload from 'components/s3upload/index';
-import { useRecoilState } from 'recoil';
-import { joinModalOpen, isLaunched } from 'constants/atoms';
-import Text from 'public/assets/Accelerate_Your_Potential_new.svg';
-import Logo from 'public/assets/new_logo(wh).svg';
-import LogoLikeLion from 'public/assets/likelion_kor_logo.svg';
+import ReactPannellum, { getConfig } from "react-pannellum";
+import { FireLottie } from "components/lottie/lottie";
+import RocketImg from "public/assets/joinus_rocket.png";
+import PlanetImg from "public/assets/new_earth@4x.png";
+import { motion } from "framer-motion";
+import S3upload from "components/s3upload/index";
+import { useRecoilState } from "recoil";
+import { joinModalOpen, isLaunched } from "constants/atoms";
+import Text from "public/assets/Accelerate_Your_Potential_new.svg";
+import Logo from "public/assets/new_logo(wh).svg";
+import LogoLikeLion from "public/assets/likelion_kor_logo.svg";
 const variants = {
     open: { opacity: 1 },
     closed: { opacity: 0 },
@@ -37,11 +37,11 @@ export default function Join() {
         showControls: false,
         mouseZoom: false,
         uiText: {
-            loadingLabel: 'NEXT를 향해 비행중...',
-            bylineLabel: '',
-            iOS8WebGLError: '',
-            genericWebGLError: '',
-            textureSizeError: '',
+            loadingLabel: "NEXT를 향해 비행중...",
+            bylineLabel: "",
+            iOS8WebGLError: "",
+            genericWebGLError: "",
+            textureSizeError: "",
         },
     };
 
@@ -56,16 +56,16 @@ export default function Join() {
         };
     }, []);
 
-    const startApplicationTime = new Date('2025-02-02T23:50:00');
-    const endApplicationTime = new Date('2025-02-15T23:59:55');
+    const startApplicationTime = new Date("2025-02-02T23:50:00");
+    const endApplicationTime = new Date("2025-02-15T23:59:55");
 
-    let buttonText = '지원하기';
+    let buttonText = "지원하기";
     let disabled = false;
 
     if (currentTime < startApplicationTime) {
-        buttonText = '아직 모집 기간이 아닙니다';
+        buttonText = "아직 모집 기간이 아닙니다";
     } else if (currentTime > endApplicationTime) {
-        buttonText = '모집 기간이 종료되었습니다';
+        buttonText = "모집 기간이 종료되었습니다";
     }
 
     useEffect(() => {
@@ -89,6 +89,7 @@ export default function Join() {
     return (
         <div>
             <Head>
+                <title>NEXT - 고려대 멋사 | 고려대학교 소프트웨어 창업학회: JOIN</title>
                 <link rel="icon" href="/favicon.svg" />
             </Head>
             {!loading && (
@@ -110,7 +111,7 @@ export default function Join() {
                                 height={Logo.height / 2}
                             />
                             <div className="university-wrapper">
-                                <span style={{ fontWeight: 400, fontSize: '2.5rem' }}>고려대학교</span>
+                                <span style={{ fontWeight: 400, fontSize: "2.5rem" }}>고려대학교</span>
                                 <Image src={LogoLikeLion} alt="Like Lion" layout="intrinsic" />
                             </div>
                             <p>13기 모집</p>
@@ -125,13 +126,13 @@ export default function Join() {
                         <S.TitleWrapper isMobile={isMobile}>
                             <p>지원해주셔서 감사합니다</p>
                             <br />
-                            <p style={{ fontSize: '1.8rem' }}>NEXT에서 세상을 바꿔나갈 여러분의 도전을 응원합니다!</p>
+                            <p style={{ fontSize: "1.8rem" }}>NEXT에서 세상을 바꿔나갈 여러분의 도전을 응원합니다!</p>
                         </S.TitleWrapper>
                     )}
                     <motion.div
-                        animate={modalOpen ? 'open' : 'closed'}
+                        animate={modalOpen ? "open" : "closed"}
                         variants={variants}
-                        style={{ zIndex: '10', opacity: '0' }}
+                        style={{ zIndex: "10", opacity: "0" }}
                     >
                         <S.ModalContainer infoOpen={modalOpen}>
                             <S.CloseBtnWrapper>
@@ -222,7 +223,7 @@ export default function Join() {
                                             <button
                                                 onClick={() =>
                                                     (location.href =
-                                                        'https://docs.google.com/document/d/18Q33ghiQllUNdZjMVF_8zU5CUH3W1vl8/export?format=docx')
+                                                        "https://docs.google.com/document/d/18Q33ghiQllUNdZjMVF_8zU5CUH3W1vl8/export?format=docx")
                                                 }
                                             >
                                                 지원서 다운로드
@@ -235,8 +236,8 @@ export default function Join() {
                                                         currentTime <= endApplicationTime
                                                     ) {
                                                         window.open(
-                                                            'https://docs.google.com/forms/d/e/1FAIpQLSflklIDViHx8pV6O3QBd6tHYaGYhol6xGxIvjzZorH-fCy5Dw/viewform',
-                                                            '_blank'
+                                                            "https://docs.google.com/forms/d/e/1FAIpQLSflklIDViHx8pV6O3QBd6tHYaGYhol6xGxIvjzZorH-fCy5Dw/viewform",
+                                                            "_blank"
                                                         );
                                                     }
                                                 }}

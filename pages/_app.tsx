@@ -14,7 +14,7 @@ import Script from "next/script";
 import NProgress from "nprogress";
 import "nprogress/nprogress.css";
 
-const defaultTitle = "NEXT | 고려대학교 소프트웨어 창업학회";
+const defaultTitle = "NEXT - 고려대 멋사 | 고려대학교 소프트웨어 창업학회";
 const defaultDescription =
     "고려대 소프트웨어 창업학회 NEXT에서는 혁신적인 아이디어를 현실로 만들어갈 창업가 인재를 모집합니다.";
 const defaultImage = "https://next-recruit.s3.ap-northeast-2.amazonaws.com/assets/mail-main.png";
@@ -63,7 +63,7 @@ export default function App({ Component, pageProps }: AppProps<{ session: Sessio
                 <ChakraProvider>
                     <GlobalStyle>
                         <Head>
-                            // 추후 동적으로 title 업데이트 가능
+                            // 추후 동적으로 meta tag 업데이트 가능
                             {/* Open Graph (Facebook, LinkedIn, etc.) */}
                             <meta property="og:type" content="website" />
                             <meta property="og:url" content="https://www.next-ku.com/" />
