@@ -1,31 +1,21 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    typescript: { ignoreBuildErrors: true },
     reactStrictMode: true,
     compiler: {
         styledComponents: true,
     },
-    compress: true, // Gzip & Brotli 압축 활성화
-    async redirects() {
-        return [
-            {
-                source: "/",
-                destination: "/home",
-                permanent: true, // 301 리디렉션 (속도 & SEO 최적화)
-            },
-        ];
+    experimental: {
+        optimizePackageImports: true, // Next.js 자체 최적화
     },
-    async headers() {
-        return [
-            {
-                source: "/_next/static/:path*",
-                headers: [{ key: "Cache-Control", value: "public, max-age=31536000, immutable" }],
-            },
-            {
-                source: "/",
-                headers: [{ key: "Cache-Control", value: "public, max-age=86400, must-revalidate" }],
-            },
-        ];
+    webpack(config) {
+        config.optimization.splitChunks = {
+            chunks: "all",
+            minSize: 20000, // 최소 청크 크기 조절 (번들 크기 줄이기)
+        };
+        return config;
+    },
+    async redirects() {
+        return [];
     },
 };
 
