@@ -66,7 +66,6 @@ const NavBar = () => {
                                     width={80}
                                     height={25}
                                     priority
-                                    fetchPriority="high"
                                     onClick={() => router.push("home")}
                                     style={{ cursor: "pointer" }}
                                 />
@@ -278,7 +277,6 @@ const NavBar = () => {
                         width={120}
                         height={30}
                         priority
-                        fetchPriority="high"
                         onClick={() => router.push("home")}
                         style={{ cursor: "pointer" }}
                     />
