@@ -6,7 +6,7 @@ import "aos/dist/aos.css";
 import { useRouter } from "next/router";
 import { DemodayFinalLottie, DemodayInHouseLottie } from "components/lottie/lottie";
 import SliderSlick from "components/sliderSlick/index";
-import { DemoItem } from "constants/demo.ts";
+import { DemoItem } from "constants/demo";
 
 export default function Curriculrum() {
     const router = useRouter();
