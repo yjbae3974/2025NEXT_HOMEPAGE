@@ -1,14 +1,19 @@
 import Head from "next/head";
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
+import dynamic from "next/dynamic";
+import { useRouter } from "next/router";
+
+// Style & Component & Constants
 import * as S from "styles/home/style";
 import { useMediaQuery } from "react-responsive";
-import Logo from "public/assets/logo.png";
-import LikeLion from "public/assets/likelion_kor_logo.svg";
-import MainBG from "public/assets/Rocket_Background.png";
-import Text from "public/assets/Accelerate_Your_Potential_new.svg";
-import dynamic from "next/dynamic";
+import { Partners } from "constants/partners";
+import Sticky from "components/sticky";
 
+// AOS 동적 로드 (SSR 방지)
+const AOS = dynamic(() => import("aos"), { ssr: false });
+
+// Lottie 애니메이션 동적 로드
 const RocketLottie = dynamic(() => import("components/lottie/lottie").then((mod) => mod.RocketLottie), { ssr: false });
 const LaptopLottie = dynamic(() => import("components/lottie/lottie").then((mod) => mod.LaptopLottie), { ssr: false });
 const SessionLottie = dynamic(() => import("components/lottie/lottie").then((mod) => mod.SessionLottie), {
@@ -21,28 +26,35 @@ const DemodayLottie = dynamic(() => import("components/lottie/lottie").then((mod
     ssr: false,
 });
 
-import { Partners } from "constants/partners";
-import Sticky from "components/sticky";
+// Static Assets
+import Logo from "public/assets/logo.png";
+import LikeLion from "public/assets/likelion_kor_logo.svg";
+import MainBG from "public/assets/Rocket_Background.png";
+import Text from "public/assets/Accelerate_Your_Potential_new.svg";
+
 import "aos/dist/aos.css";
-import { useRouter } from "next/router";
+
 export default function Main() {
     const router = useRouter();
     const [loading, setLoading] = useState(true);
-    const isDesktop = useMediaQuery({ minDeviceWidth: 820 });
-    const isMobile = useMediaQuery({ maxWidth: 820 });
-    const partners = Partners;
+
+    const isMobile = useMediaQuery({ query: "(max-width: 820px)" });
+
     useEffect(() => {
         import("aos").then((AOS) => {
-            AOS.init();
+            AOS.default.init();
         });
-        if (isMobile != undefined && isDesktop != undefined) {
+    }, []);
+
+    useEffect(() => {
+        if (typeof window !== "undefined") {
             setLoading(false);
         }
-    }, []);
+    }, [isMobile]);
     return (
         <div>
             <Head>
-                <title>NEXT - 고려대 멋사 | 고려대학교 소프트웨어 창업학회: HOME</title>
+                <title>고려대 소프트웨어 창업 학회 | NEXT (고려대 멋사) : HOME</title>
                 <meta name="google-site-verification" content="YdrWjel7OcCUGNmuvaV86uwaB_ZEqJsOqOoV-rKi6vA" />
             </Head>
             {/* <Intro></Intro> */}
@@ -76,11 +88,11 @@ export default function Main() {
                         </div>
                         <div>
                             <S.HomeTwoTextWrapper data-aos="fade">
-                                <img src={Text.src} />
+                                <Image src={Text} alt="Main Text" width={600} height={300} priority />
                             </S.HomeTwoTextWrapper>
                             <p
                                 style={{
-                                    marginTop: "10rem",
+                                    marginTop: "5rem",
                                     fontWeight: "700",
                                     fontSize: "3rem",
                                 }}
@@ -169,9 +181,9 @@ export default function Main() {
                             </p>
                         </S.TextWrapper>
                         <S.PartnerContainer isMobile={isMobile}>
-                            {partners.map(({ name, src }) => (
+                            {Partners.map(({ name, src }) => (
                                 <div key={name} data-aos="fade">
-                                    <img alt={name} src={src.src} />
+                                    <Image alt={name} src={src} width={200} height={100} layout="responsive" />
                                 </div>
                             ))}
                         </S.PartnerContainer>

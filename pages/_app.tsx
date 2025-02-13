@@ -67,10 +67,10 @@ export default function App({ Component, pageProps }: AppProps<{ session: Sessio
                             {/* Open Graph (Facebook, LinkedIn, etc.) */}
                             <meta property="og:type" content="website" />
                             <meta property="og:url" content="https://www.next-ku.com/" />
-                            <meta property="og:title" content="NEXT - 고려대 멋사 | 고려대학교 소프트웨어 창업학회" />
+                            <meta property="og:title" content="고려대 소프트웨어 창업 학회 | NEXT (고려대 멋사)" />
                             <meta
                                 property="og:description"
-                                content="🚀 Accelerate Your Potential! NEXT - 고려대학교 멋사에서 함께 성장하세요!"
+                                content="고려대 소프트웨어 창업 학회 | NEXT에서 개발자 & 스타트업 창업의 허브 🚀 혁신적인 아이디어를 현실로 만들어 보세요."
                             />
                             <meta
                                 property="og:image"
@@ -80,10 +80,10 @@ export default function App({ Component, pageProps }: AppProps<{ session: Sessio
                             <meta property="og:image:height" content="630" />
                             {/* Twitter Meta Tags */}
                             <meta name="twitter:card" content="summary_large_image" />
-                            <meta name="twitter:title" content="NEXT | 고려대학교 소프트웨어 창업학회" />
+                            <meta name="twitter:title" content="고려대 소프트웨어 창업 학회 | NEXT (고려대 멋사)" />
                             <meta
                                 name="twitter:description"
-                                content="🚀 Accelerate Your Potential! NEXT - 고려대학교 멋사에서 함께 성장하세요!"
+                                content="고려대 소프트웨어 창업 학회 | NEXT에서 개발자 & 스타트업 창업의 허브 🚀 혁신적인 아이디어를 현실로 만들어 보세요."
                             />
                             <meta
                                 name="twitter:image"
@@ -97,7 +97,7 @@ export default function App({ Component, pageProps }: AppProps<{ session: Sessio
                             />
                             <meta
                                 name="description"
-                                content="고려대 소프트웨어 창업학회 NEXT에서는 혁신적인 아이디어를 현실로 만들어갈 창업가 인재를 모집합니다."
+                                content="고려대 소프트웨어 창업 학회 | NEXT에서 개발자 & 스타트업 창업의 허브 🚀 혁신적인 아이디어를 현실로 만들어 보세요."
                             />
                         </Head>
                         <Header></Header>

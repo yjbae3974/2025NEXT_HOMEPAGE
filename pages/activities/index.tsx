@@ -37,7 +37,7 @@ export default function Activities() {
     return (
         <>
             <Head>
-                <title>NEXT - 고려대 멋사 | 고려대학교 소프트웨어 창업학회: ACTIVITIES</title>
+                <title>고려대 소프트웨어 창업 학회 | NEXT (고려대 멋사) : ACTIVITIES</title>
             </Head>
             {!loading && (
                 <S.Container isMobile={isMobile}>

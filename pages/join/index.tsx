@@ -89,7 +89,7 @@ export default function Join() {
     return (
         <div>
             <Head>
-                <title>NEXT - 고려대 멋사 | 고려대학교 소프트웨어 창업학회: JOIN</title>
+                <title>고려대 소프트웨어 창업 학회 | NEXT (고려대 멋사) : JOIN</title>
                 <link rel="icon" href="/favicon.svg" />
             </Head>
             {!loading && (
