@@ -1,35 +1,40 @@
 import Head from "next/head";
 import React, { useState, useEffect } from "react";
-import * as S from "styles/people/style";
+import dynamic from "next/dynamic";
 import { useMediaQuery } from "react-responsive";
-import AOS from "aos";
-import "aos/dist/aos.css";
-import { useRouter } from "next/router";
 import { Tabs } from "antd";
-import { PEOPLE_ITEMS } from "constants/people";
-import Member from "./components/Member";
-import { PEOPLE_INFORMATION } from "constants/people";
-import Cardnews from "./components/Cardnews";
+import { useRouter } from "next/router";
+import * as S from "styles/people/style";
+import { PEOPLE_ITEMS, PEOPLE_INFORMATION } from "constants/people";
+
+// AOS 동적 로드 (SSR 방지)
+const AOS = dynamic(() => import("aos"), { ssr: false });
+
+// 멤버 및 카드뉴스 컴포넌트 동적 로딩
+const Member = dynamic(() => import("./components/Member"), { ssr: false });
+const Cardnews = dynamic(() => import("./components/Cardnews"), { ssr: false });
 
 const { TEN, ELEVEN, TWELVE } = PEOPLE_ITEMS;
 
 export default function People() {
     const router = useRouter();
     const [loading, setLoading] = useState(true);
-    const isDesktop = useMediaQuery({ minDeviceWidth: 820 });
-    const isMobile = useMediaQuery({ maxWidth: 820 });
+
+    const isMobile = useMediaQuery({ query: "(max-width: 820px)" });
 
     useEffect(() => {
-        AOS.init();
-        if (isMobile != undefined && isDesktop != undefined) {
-            setLoading(false);
-        }
+        import("aos").then((AOS) => {
+            AOS.default.init();
+        });
+        setLoading(false);
     }, []);
+
     return (
         <>
             <Head>
                 <title>고려대 소프트웨어 창업 학회 | NEXT 멋사 : PEOPLE</title>
             </Head>
+
             {!loading && (
                 <S.Container isMobile={isMobile}>
                     <Tabs

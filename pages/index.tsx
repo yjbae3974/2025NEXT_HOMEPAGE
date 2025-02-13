@@ -1,7 +1,5 @@
-import Head from 'next/head';
-import React, { useState, useEffect, useRef } from 'react';
-import Image from 'next/image';
-import { useMediaQuery } from 'react-responsive';
+import React, { useState, useEffect, useRef } from "react";
+import { useMediaQuery } from "react-responsive";
 
 export default function Home() {
     const [loading, setLoading] = useState(true);
@@ -16,7 +14,7 @@ export default function Home() {
                 <link rel="icon" href="/favicon.svg" />
             </Head> */}
             <h2>헤더 반응 테스트용. 사라질 페이지. /home에서 시작할 예정</h2>
-            <div style={{ width: '100%', height: '300vh', background: 'grey' }}></div>
+            <div style={{ width: "100%", height: "300vh", background: "grey" }}></div>
         </div>
     );
 }

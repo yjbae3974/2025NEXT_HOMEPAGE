@@ -1,27 +1,28 @@
 import Head from "next/head";
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
+import dynamic from "next/dynamic";
 import Image from "next/image";
 import { useMediaQuery } from "react-responsive";
+import { motion } from "framer-motion";
+import { useRecoilState } from "recoil";
 import * as S from "styles/join/style";
-import spaceImg from "public/assets/space_pressed.jpg";
-// import spaceImg from "public/assets/space.jpg";
-// import spaceImg2 from "public/assets/space2.jpg";
-// import spaceImg3 from "public/assets/space3.jpg";
-import ReactPannellum, { getConfig } from "react-pannellum";
-import { FireLottie } from "components/lottie/lottie";
+import { joinModalOpen, isLaunched } from "constants/atoms";
+
+// Static Assets
 import RocketImg from "public/assets/joinus_rocket.png";
 import PlanetImg from "public/assets/new_earth@4x.png";
-import { motion } from "framer-motion";
-import S3upload from "components/s3upload/index";
-import { useRecoilState } from "recoil";
-import { joinModalOpen, isLaunched } from "constants/atoms";
 import Text from "public/assets/Accelerate_Your_Potential_new.svg";
 import Logo from "public/assets/new_logo(wh).svg";
 import LogoLikeLion from "public/assets/likelion_kor_logo.svg";
+
 const variants = {
     open: { opacity: 1 },
     closed: { opacity: 0 },
 };
+
+// 동적 로딩
+const S3upload = dynamic(() => import("components/s3upload/index"), { ssr: false });
+const AOS = dynamic(() => import("aos"), { ssr: false });
 
 export default function Join() {
     const [loading, setLoading] = useState(true);
@@ -29,8 +30,9 @@ export default function Join() {
     const [modalPage, setModalPage] = useState(1);
     const [modalOpen, setModalOpen] = useRecoilState(joinModalOpen);
     const [accept, setAccept] = useState(false);
-    const isDesktop = useMediaQuery({ minDeviceWidth: 1000 });
+
     const isMobile = useMediaQuery({ maxWidth: 1000 });
+
     const config = {
         autoRotate: 1,
         autoLoad: true,
@@ -57,7 +59,7 @@ export default function Join() {
     }, []);
 
     const startApplicationTime = new Date("2025-02-02T23:50:00");
-    const endApplicationTime = new Date("2025-02-15T23:59:55");
+    const endApplicationTime = new Date("2025-02-16T23:59:59");
 
     let buttonText = "지원하기";
     let disabled = false;
@@ -67,11 +69,12 @@ export default function Join() {
     } else if (currentTime > endApplicationTime) {
         buttonText = "모집 기간이 종료되었습니다";
     }
-
     useEffect(() => {
-        // console.log("loaded");
+        import("aos").then((AOS) => {
+            AOS.default.init({ duration: 1000, once: true });
+        });
         setLoading(false);
-    }, [isMobile, isDesktop]);
+    }, []);
 
     useEffect(() => {
         return () => {
@@ -270,21 +273,6 @@ export default function Join() {
                             <img draggable={false} src={PlanetImg.src} />
                         </S.Planet>
                     </S.SpaceContainer>
-
-                    {/*<ReactPannellum
-                        id="1"
-                        sceneId="BG"
-                        // haov={200}
-                        imageSource={spaceImg.src}
-                        config={config}
-                        style={{
-                            width: '100vw',
-                            height: '100vh',
-                            background: '#000000',
-                            cursor: 'pointer',
-                        }}
-                    />
-                      */}
                 </S.Container>
             )}
         </div>

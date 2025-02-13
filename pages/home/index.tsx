@@ -32,8 +32,6 @@ import LikeLion from "public/assets/likelion_kor_logo.svg";
 import MainBG from "public/assets/Rocket_Background.png";
 import Text from "public/assets/Accelerate_Your_Potential_new.svg";
 
-import "aos/dist/aos.css";
-
 export default function Main() {
     const router = useRouter();
     const [loading, setLoading] = useState(true);

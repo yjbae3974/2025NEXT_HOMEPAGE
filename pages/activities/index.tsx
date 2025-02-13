@@ -1,44 +1,56 @@
 import Head from "next/head";
 import React, { useState, useEffect } from "react";
-import * as S from "styles/activities/style";
+import dynamic from "next/dynamic";
 import { useMediaQuery } from "react-responsive";
-import AOS from "aos";
-import "aos/dist/aos.css";
-import { useRouter } from "next/router";
 import { Tabs } from "antd";
+import { useRouter } from "next/router";
+import * as S from "styles/activities/style";
 import { ACTIVITY_ITEMS } from "constants/activities";
-import Curriculrum from "./components/curriculum";
-import Session from "./components/session";
-import Project from "./components/project";
-import Demoday from "./components/demoday";
+
+// AOS 동적 로드 (SSR 방지)
+const AOS = dynamic(() => import("aos"), { ssr: false });
+
+// 각 섹션을 `dynamic import`로 최적화
+const Curriculum = dynamic(() => import("./components/curriculum"), { ssr: false });
+const Session = dynamic(() => import("./components/session"), { ssr: false });
+const Project = dynamic(() => import("./components/project"), { ssr: false });
+const Demoday = dynamic(() => import("./components/demoday"), { ssr: false });
 
 const { CURRICULUM, SESSION, PROJECT, DEMODAY } = ACTIVITY_ITEMS;
 
 export default function Activities() {
     const router = useRouter();
     const [loading, setLoading] = useState(true);
-    const isDesktop = useMediaQuery({ minDeviceWidth: 820 });
-    const isMobile = useMediaQuery({ maxWidth: 820 });
-    const isTabCenter = useMediaQuery({ minWidth: 381 });
-    const key = router.query.key;
-    const [viewKey, setViewKey] = useState<any>("1");
+
+    const isMobile = useMediaQuery({ query: "(max-width: 820px)" });
+    const isTabCenter = useMediaQuery({ query: "(min-width: 381px)" });
+
+    const [viewKey, setViewKey] = useState<string>("1");
 
     useEffect(() => {
-        AOS.init();
-        if (isMobile != undefined && isDesktop != undefined) {
+        import("aos").then((AOS) => {
+            AOS.default.init();
+        });
+    }, []);
+
+    useEffect(() => {
+        if (typeof window !== "undefined") {
             setLoading(false);
         }
-    }, []);
+    }, [isMobile]);
+
     useEffect(() => {
-        if (key) {
-            setViewKey(key);
+        if (router.query.key) {
+            setViewKey(router.query.key as string);
         }
-    }, [router]);
+    }, [router.query.key]);
+
     return (
         <>
             <Head>
                 <title>고려대 소프트웨어 창업 학회 | NEXT (고려대 멋사) : ACTIVITIES</title>
             </Head>
+
             {!loading && (
                 <S.Container isMobile={isMobile}>
                     <Tabs
@@ -50,7 +62,7 @@ export default function Activities() {
                             {
                                 label: CURRICULUM,
                                 key: "1",
-                                children: <Curriculrum />,
+                                children: <Curriculum />,
                             },
                             {
                                 label: SESSION,

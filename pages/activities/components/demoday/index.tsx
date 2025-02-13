@@ -1,18 +1,12 @@
-import * as S from 'styles/activities/components/demoday/index';
-import Head from 'next/head';
-import Image from 'next/image';
-import React, { useState, useEffect, useRef } from 'react';
-import { useMediaQuery } from 'react-responsive';
-import AOS from 'aos';
-import SessionDev from 'public/assets/activities/session-development.png';
-import SessionStartup from 'public/assets/activities/session-startup.png';
-import Demoteams from 'public/images/activities/demoday/demoteams.png';
-import 'aos/dist/aos.css';
-import { useRouter } from 'next/router';
-import { DemodayFinalLottie, DemodayInHouseLottie } from 'components/lottie/lottie';
-import SliderSlick from 'components/sliderSlick/index';
-import ImageSlider from 'components/imageSlider/index';
-import { DemoItem } from 'constants/demo.ts';
+import * as S from "styles/activities/components/demoday/index";
+import React, { useState, useEffect, useRef } from "react";
+import { useMediaQuery } from "react-responsive";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useRouter } from "next/router";
+import { DemodayFinalLottie, DemodayInHouseLottie } from "components/lottie/lottie";
+import SliderSlick from "components/sliderSlick/index";
+import { DemoItem } from "constants/demo.ts";
 
 export default function Curriculrum() {
     const router = useRouter();

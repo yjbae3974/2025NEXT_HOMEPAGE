@@ -1,46 +1,57 @@
 import Head from "next/head";
 import React, { useState, useEffect } from "react";
-import * as S from "styles/about/style";
+import dynamic from "next/dynamic";
 import { useMediaQuery } from "react-responsive";
-import AOS from "aos";
-import "aos/dist/aos.css";
-// import { useRouter } from "next/router";
 import { Tabs } from "antd";
-import { ABOUT_ITEMS } from "constants/about";
-import Partners from "pages/about/components/partners";
-import Introduction from "pages/about/components/introduction";
-import Greeting from "pages/about/components/greeting";
-import History from "pages/about/components/history";
-import Achievement from "pages/about/components/achievement";
 import { useRouter } from "next/router";
+import * as S from "styles/about/style";
+import { ABOUT_ITEMS } from "constants/about";
+
+// AOS 동적 로드 (SSR 방지)
+const AOS = dynamic(() => import("aos"), { ssr: false });
+
+// 각 섹션을 `dynamic import`로 최적화
+const Partners = dynamic(() => import("pages/about/components/partners"), { ssr: false });
+const Introduction = dynamic(() => import("pages/about/components/introduction"), { ssr: false });
+const Greeting = dynamic(() => import("pages/about/components/greeting"), { ssr: false });
+const History = dynamic(() => import("pages/about/components/history"), { ssr: false });
+const Achievement = dynamic(() => import("pages/about/components/achievement"), { ssr: false });
+
 const { GREETING, HISTORY, ACHIEVEMENT, PARTNERS } = ABOUT_ITEMS;
 
 export default function About() {
     const router = useRouter();
     const [loading, setLoading] = useState(true);
-    const isDesktop = useMediaQuery({ minDeviceWidth: 820 });
-    const isMobile = useMediaQuery({ maxWidth: 820 });
-    const isTabCenter = useMediaQuery({ minWidth: 500 });
-    const key = router.query.key;
-    const [viewKey, setViewKey] = useState<any>("1");
+
+    const isMobile = useMediaQuery({ query: "(max-width: 820px)" });
+    const isTabCenter = useMediaQuery({ query: "(min-width: 500px)" });
+
+    const [viewKey, setViewKey] = useState<string>("1");
 
     useEffect(() => {
-        AOS.init();
-        if (isMobile != undefined && isDesktop != undefined) {
+        import("aos").then((AOS) => {
+            AOS.default.init();
+        });
+    }, []);
+
+    useEffect(() => {
+        if (typeof window !== "undefined") {
             setLoading(false);
         }
-    }, []);
+    }, [isMobile]);
+
     useEffect(() => {
-        if (key) {
-            setViewKey(key);
+        if (router.query.key) {
+            setViewKey(router.query.key as string);
         }
-    }, [router]);
+    }, [router.query.key]);
 
     return (
         <>
             <Head>
                 <title>고려대 소프트웨어 창업 학회 | NEXT (고려대 멋사) : ABOUT US</title>
             </Head>
+
             {!loading && (
                 <S.Container isMobile={isMobile}>
                     <Tabs
@@ -49,11 +60,6 @@ export default function About() {
                         onChange={(key) => setViewKey(key)}
                         centered={isTabCenter}
                         items={[
-                            // {
-                            //   label: INTRODUCTION,
-                            //   key: "1",
-                            //   children: <Introduction />,
-                            // },
                             {
                                 label: GREETING,
                                 key: "1",
