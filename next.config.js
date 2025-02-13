@@ -5,7 +5,7 @@ const nextConfig = {
         styledComponents: true,
     },
     experimental: {
-        optimizePackageImports: true, // Next.js 자체 최적화
+        optimizeCss: true, // Next.js 자체 최적화
     },
     webpack(config) {
         config.optimization.splitChunks = {
