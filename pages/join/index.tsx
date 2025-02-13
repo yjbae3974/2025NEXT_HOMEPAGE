@@ -89,8 +89,6 @@ export default function Join() {
     return (
         <div>
             <Head>
-                <title>NEXT: JOIN</title>
-                <meta name="description" content="고려대학교 소프트웨어창업학회 NEXT에 탑승하세요" />
                 <link rel="icon" href="/favicon.svg" />
             </Head>
             {!loading && (

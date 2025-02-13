@@ -54,7 +54,7 @@ export default function Achievement() {
                 <S.ImageWrapper isMobile={isMobile} className="mount">
                     {StartupsItems.map(({ name, src }) => (
                         <S.ImageElementWrapper key={name} data-aos="fade" isMobile={isMobile}>
-                            <img src={src.src} />
+                            <img alt={name} src={src.src} />
                         </S.ImageElementWrapper>
                     ))}
                 </S.ImageWrapper>

@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import * as S from 'styles/home/style';
 import { useMediaQuery } from 'react-responsive';
@@ -42,8 +42,6 @@ export default function Main() {
     return (
         <div>
             <Head>
-                <title>NEXT: HOME</title>
-                <meta name="description" content="고려대학교 소프트웨어창업학회 NEXT" />
                 <meta name="google-site-verification" content="YdrWjel7OcCUGNmuvaV86uwaB_ZEqJsOqOoV-rKi6vA" />
             </Head>
             {/* <Intro></Intro> */}
@@ -160,6 +158,7 @@ export default function Main() {
                                     고려대학교 소프트웨어 창업학회 &nbsp;
                                     <S.NextInlineLogo2
                                         src={Logo.src}
+                                        alt="NEXT"
                                         width="100px"
                                         marginLeft="2px"
                                         marginRight="3px"
@@ -171,7 +170,7 @@ export default function Main() {
                         <S.PartnerContainer isMobile={isMobile}>
                             {partners.map(({ name, src }) => (
                                 <div key={name} data-aos="fade">
-                                    <img src={src.src} />
+                                    <img alt={name} src={src.src} />
                                 </div>
                             ))}
                         </S.PartnerContainer>

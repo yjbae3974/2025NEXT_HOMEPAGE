@@ -27,10 +27,6 @@ export default function People() {
     }, []);
     return (
         <>
-            <Head>
-                <title>NEXT: PEOPLE</title>
-                <meta name="description" content="고려대학교 소프트웨어창업학회 NEXT PEOPLE" />
-            </Head>
             {!loading && (
                 <S.Container isMobile={isMobile}>
                     <Tabs
@@ -62,7 +58,7 @@ export default function People() {
                                 children: (
                                     <Member peopleInformation={PEOPLE_INFORMATION.filter((item) => item.gen === 12)} />
                                 ),
-                            }
+                            },
                         ]}
                     />
                 </S.Container>
