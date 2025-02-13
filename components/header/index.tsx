@@ -5,8 +5,6 @@ import * as S from "styles/components/header/style";
 import LogoImg from "public/assets/logo.png";
 import BlackLogoImg from "public/assets/blackLogo.png";
 import { useMediaQuery } from "react-responsive";
-import { MenuOutlined } from "@ant-design/icons";
-import { Menu } from "antd";
 import "antd/dist/reset.css";
 import { useRouter } from "next/router";
 import { motion, AnimatePresence } from "framer-motion";
@@ -62,7 +60,16 @@ const NavBar = () => {
                     <>
                         <S.Container isOpen={isOpen}>
                             <S.Header>
-                                <S.NavBarLogo src={LogoImg.src} onClick={() => router.push("home")} alt="NEXT 로고" />
+                                <Image
+                                    src={LogoImg}
+                                    alt="NEXT 로고"
+                                    width={80}
+                                    height={25}
+                                    priority
+                                    fetchPriority="high"
+                                    onClick={() => router.push("home")}
+                                    style={{ cursor: "pointer" }}
+                                />
                                 <S.HamburgerContainer
                                     onClick={() => {
                                         setIsOpen((prev) => !prev);

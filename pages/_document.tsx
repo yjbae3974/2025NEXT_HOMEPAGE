@@ -50,14 +50,17 @@ export default class MyDocument extends Document {
                     <link
                         rel="stylesheet"
                         href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+                        defer
                     />
                     <link
                         rel="stylesheet"
                         href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
+                        defer
                     />
                     <link
                         rel="stylesheet"
                         href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
+                        defer
                     />
 
                     {/* Favicon */}

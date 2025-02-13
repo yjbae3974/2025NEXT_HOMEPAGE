@@ -45,6 +45,7 @@ export default function App({ Component, pageProps }: AppProps<{ session: Sessio
     }, []);
     // GA 설정 시작
     const router = useRouter();
+
     useEffect(() => {
         const handleRouteChange = (url: any) => {
             gtag.pageview(url);
@@ -114,6 +115,10 @@ export default function App({ Component, pageProps }: AppProps<{ session: Sessio
                     gtag('config', 'G-EH9Q3YYL1L');
                 `}
                         </Script>
+                        <Script
+                            src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
+                            strategy="afterInteractive"
+                        />
                         {/* GA 설정 끝 */}
                         {loading ? <Loading /> : <Component {...pageProps} />}
                         {/* <Loading /> */}
