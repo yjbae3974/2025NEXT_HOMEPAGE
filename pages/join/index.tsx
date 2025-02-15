@@ -59,7 +59,7 @@ export default function Join() {
     }, []);
 
     const startApplicationTime = new Date("2025-02-02T23:50:00");
-    const endApplicationTime = new Date("2025-02-16T23:59:59");
+    const endApplicationTime = new Date("2025-02-15T23:59:59");
 
     let buttonText = "지원하기";
     let disabled = false;
